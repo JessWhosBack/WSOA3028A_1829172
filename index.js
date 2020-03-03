@@ -1,8 +1,9 @@
-let button = document.createElement("button");
-button.innerHTML = "MY BLOGS";
+//let myButton = document.createElement("button");
+//myButton.innerHTML = "Words";
+//let x = document.getElementsByClassName("ClassName")[0];
+//x.appendChild(myButton);
 
-let x = document.getElementsByClassName("ButtonTest")[0];
-x.appendChild(button);
 
-button.addEventListener("click", function () { location.href = "blogs/My-Blogs.html"; });
 
+let myBlogButton = document.getElementsByClassName("ButtonTest")[0];
+myBlogButton.addEventListener("click", function () { location.href = "blogs/My-Blogs.html"; });
