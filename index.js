@@ -19,6 +19,3 @@ if (myHeader != null) {
     })
 }
 
-
-
-

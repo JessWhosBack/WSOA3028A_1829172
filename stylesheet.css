@@ -14,7 +14,6 @@ body{
 }
 
 article {
-    padding-top: 75px;
     padding-right: 10%;
     padding-left: 10%;
 }
@@ -140,8 +139,34 @@ blockquote{
     border-collapse: collapse;
 }
 
-td, th{
+.blogTable td, th{
     text-align: left;
     padding: 8px;
 }
 
+.contactPageTable{
+    display: table;
+}
+
+.contactPageTable a{
+    display: table-cell;
+    padding-left: 40pt;
+    padding-right: 40pt;
+}
+
+
+.EmailForm label{
+    text-align: left;
+    display: block;
+    width:40%
+}
+
+.EmailForm input[type=text], textarea{
+    width:40%;
+    display: block;
+}
+
+.EmailForm input[type=submit]{
+    width:150pt;
+    display: block;
+}

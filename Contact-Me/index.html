@@ -35,44 +35,50 @@
                 </ul>
             </section>
         </header>
+        <section class="topSection">
+            <h1>Contact Me</h1>
+        </section>
         <article>
             <center>
-                This will have links to fake (or real if I have enough time) social media accounts, emails and other
-                contact details.
-            </center>
-            <section class="topSection">
-                <h1>Contact Me</h1>
-            </section>
-            <section class="contactForm">
-                <p>
-                    This is my contact form. Feel free to send me an email!
-                </p>
-                <form action="../#" id="form" method="post" name="form">
-                    <input name="visitorName" placeholder="Your Name" type="text" value="">
-                    <input name="visitorEmail" placeholder="Your Email Address" type="text" value="">
-                    <input name="visitorSubject" placeholder="Subject" type="text" value="">
-                    <label>Your Message</label>
-                    <textarea name="visitorMessage" placeholder="Type your message here..."></textarea>
-                    <input id="send" name="submit" type="submit" value="Send Message">
+                <h2>Here are the social media sites that I am on:</h2>
+                (not really, I've only made an Instagram profile... but one can dream)
+
+
+                <figure class="contactPageTable">
+                    <a href="https://www.instagram.com/eddieblogssa/">
+                        <img style="padding:15px" height="100" src="../Images/Logo_Instagram.png" alt="Instagram Logo"
+                            title="Eddie's Instagram">
+                    </a>
+                    <a href="">
+                        <img style="padding:15px" height="100" src="../Images/Logo_FacebookThumb.png"
+                            alt="Facebook Logo" title="Eddie's Facebook">
+                    </a>
+                    <a href="">
+                        <img style="padding:15px" height="100" src="../Images/Logo_Twitter.png" alt="Twitter Logo"
+                            title="Eddie's Twitter">
+                    </a>
+                </figure>
+                <br>
+                <br>
+                <br>
+                <h2>Or you can drop me an email:</h2>
+
+
+                <form onsubmit="window.location.href='mailto:eddieblogssa@gmail.com?subject='+ EmailForm.subject.value + '&body=' 
+                    + EmailForm.body.value" name="EmailForm" method="GET" class="EmailForm">
+                    <label>Name:</label>
+                    <input type="text" name="VisitorName">
+
+                    <label>Subject:</label>
+                    <input type="text" name="subject">
+
+                    <label>Message:</label>
+                    <textarea name="body" rows="6"></textarea>
+
+                    <input type="submit" value="Open Your Email Program">
                 </form>
-                <?php include "../index.php";?>
-            </section>
-
-
-
-
-
-
-            <form action="mailto:eddieblogssa@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
-                Name:<br>
-                <input type="text" name="VisitorName"> <br> <br>
-                Message:<br><textarea name="VisitorComment" rows="4" cols="20">
-                           </textarea>
-                <br><br>
-                <input type="submit" value="Submit">
-            </form>
+            </center>
         </article>
-
 
         <footer>
             <nav>
