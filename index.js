@@ -1,10 +1,21 @@
 let myBlogButton = document.getElementsByClassName("ButtonTest")[0];
-myBlogButton.addEventListener("click", function () { location.href = "blogs/"; });
-
-let button2_2 = document.getElementsByClassName("button2_2")[0];
-button2_2.addEventListener("click", function () { location.href = "/2020/Week2/Reflection-Alan-Turing/"; });
-
+if (myBlogButton != null) {
+    myBlogButton.addEventListener("click", function () { location.href = "blogs/"; });
+}
 
 
-//let myBlogButton2 = document.getElementsByClassName("ButtonTest2")[0];
-//myBlogButton2.addEventListener("click", function () { location.href = "blogs/"; });
+let lastScrollTop = 0;
+let myHeader = document.querySelector("header");
+if (myHeader != null) {
+    window.addEventListener("scroll", function () {
+
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            myHeader.style.top = "-75px";
+        } else {
+            myHeader.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    })
+}
+
