@@ -40,6 +40,29 @@
                 This will have links to fake (or real if I have enough time) social media accounts, emails and other
                 contact details.
             </center>
+
+            <form method="post" name="contact_form" action="../index.php"> Your Name: <input type=”text” name="name">
+                Email Address:
+
+                <input type="text" name="email"> Message:
+
+                <textarea name="message"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+
+
+
+
+            <form action="mailto:eddieblogssa@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+                Name:<br>
+                <input type="text" name="VisitorName"> <br> <br>
+                Message:<br><textarea name="VisitorComment" rows="4" cols="20">
+                           </textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
         </article>
 
 

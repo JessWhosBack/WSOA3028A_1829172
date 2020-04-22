@@ -19,3 +19,16 @@ if (myHeader != null) {
     })
 }
 
+
+var frmvalidator = new Validator("contactform");
+frmvalidator.addValidation("name", "req", "Please provide your name");
+frmvalidator.addValidation("email", "req", "Please provide your email");
+frmvalidator.addValidation("email", "email", "Please enter a valid email address");
+
+//let formValidator = new Validator("contactMe_Form");
+//if (formValidator != null) {
+//    formValidator.addValidation("visitorName", "req", "Please provide your name");
+//    formValidator.addValidation("visitorEmail", "req", "Please provide your email address");
+//    formValidator.addValidation("visitorEmail", "visitorEmail", "Please enter a vlaid email address")
+//}
+
