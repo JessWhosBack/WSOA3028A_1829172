@@ -1,33 +1,25 @@
 <?php
-
-$errors = ”;
-
-$myemail = eddieblogssa@gmail.com’;//<—–Put Your email address here. 
-if(empty($_POST[‘visitorName’]) || empty($_POST[’visitorEmail’]) || empty($_POST[‘visitorMessage’])){
-    $errors .= “\n Error: all fields are required”;
+if(isset($_POST["submit"])){// Checking For Blank Fields..
+    if($_POST["visitorName"]==""||$_POST["visitorEmail"]==""||$_POST["visitorSubject"]==""||$_POST["visitorMessage"]==""){
+        echo "Fill All Fields..";
+    }else{// Check if the "Sender's Email" input field is filled out
+        $email=$_POST['visitorEmail'];// Sanitize E-mail Address
+        $email =filter_var($email, FILTER_SANITIZE_EMAIL);// Validate E-mail Address
+        $email= filter_var($email, FILTER_VALIDATE_EMAIL);
+        if (!$email){
+            echo "Invalid Sender's Email";
+        }
+        else{
+            $subject = $_POST['visitorSubject'];
+            $message = $_POST['visitorMessage'];
+            $headers = 'From:'. $email2 . "rn"; // Sender's Email
+            $headers .= 'Cc:'. $email2 . "rn"; // Carbon copy to Sender
+            // Message lines should not exceed 70 characters (PHP rule), so wrap it
+            $message = wordwrap($message, 70);
+            // Send Mail By PHP Mail Function
+            mail("eddieblogssa@gmail.com", $subject, $message, $headers);
+            echo "Your mail has been sent successfuly ! Thank you for your feedback";
+        }
+    }
 }
-
-$name = $_POST[‘visitorName’];
-
-$email_address = $_POST[’visitorEmail’];
-
-$message = $_POST[‘visitorMessage’];
-
-if (!preg_match(“/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i”, $email_address)){
-    $errors .= “\n Error: Invalid email address”;
-}
-
-if( empty($errors)){
-    $to = $myemail;
-    $email_subject = “Contact form submission: $name”;
-    $email_body = “You have received a new message. “.
-    ” Here are the details:\n Name: $name \n “.
-    “Email: $email_address\n Message \n $message”;
-    $headers = “From: $myemail\n”;
-    $headers .= “Reply-To: $email_address”;
-    mail($to,$email_subject,$email_body,$headers);
-    //redirect to the ‘thank you’ page
-    //header(‘Location: contact-form-thank-you.html’);
-}
-
 ?>
