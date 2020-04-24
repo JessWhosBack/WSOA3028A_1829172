@@ -145,6 +145,11 @@ nav{
     text-align: center;
 }
 
+img{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
 figure img{
     padding-left: 15px;
     padding-right: 15px;
