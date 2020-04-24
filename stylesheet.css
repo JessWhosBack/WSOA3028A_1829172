@@ -137,6 +137,8 @@ h1{
 .topSection{
     text-align: center;
     padding-top: 75px;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 nav{
