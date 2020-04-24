@@ -18,4 +18,3 @@ if (myHeader != null) {
         lastScrollTop = scrollTop;
     })
 }
-
