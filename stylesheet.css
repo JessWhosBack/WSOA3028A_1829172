@@ -17,6 +17,12 @@ body{
 article {
     padding-right: 10%;
     padding-left: 10%;
+    text-align: justify;
+    text-justify: distribute;    
+}
+
+section[class="NewSection"]{
+    display: inline-block;
 }
 
 footer {
@@ -112,26 +118,14 @@ header {
     background-color: #b4d2e7;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1{
     text-align: center;
     color: #0000cc;
     font-size: xxx-large;
+}
+
+h2{
+    text-align: left;
 }
 
 .topSection{
@@ -146,14 +140,13 @@ nav{
 }
 
 img{
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    width: 100%;
+    padding: 10pt;
 }
-figure img{
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+
+figure{
+    padding:0;
+    margin:0;
 }
 
 blockquote{
@@ -249,22 +242,15 @@ blockquote{
     border-collapse: collapse;
     font-size: 15pt;
 }
-.blogTable th:nth-child(1){
+.blogTable td:nth-child(1){
     width: 8%;
+    font-weight: 900;
     padding: 8pt 8pt 8pt 8pt;
     border-style: solid;
     border-color: black;
     border-width: 1pt 0pt;
 }
-.blogTable th:nth-child(2){
-    width: 20%;
-    padding: 8pt 8pt 8pt 8pt;
-    border-style: solid;
-    border-color: black;
-    border-width: 1pt 0pt;
-}
-
-.blogTable th:nth-child(3){
+.blogTable td:nth-child(2), .blogTable td:nth-child(3){
     width: 20%;
     padding: 8pt 8pt 8pt 8pt;
     border-style: solid;
@@ -286,4 +272,34 @@ blockquote{
 .blogPageButton:hover{
     color: white;
     background: #94c5cc;
+}
+
+.MemeTable_1, .MemeTable_2, .MemeTable_3{
+    width: 100%;
+}
+.MemeTable_1 td:nth-child(1){
+    width: 32%;
+    border-width: 1pt 0pt;
+}
+.MemeTable_1 td:nth-child(2){
+    vertical-align: top;
+}
+.MemeTable_1 tr td img{
+    margin:0;
+    padding: 0;
+}
+.MemeTable_2 tr td img{
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 15%;
+    padding-left: 15%;
+    width: 70%;
+}
+.MemeTable_2 td:nth-child(1){
+    width: 50%;
+}
+.MemeTable_3 td{
+    text-align: center;
+    padding: 50% 0 0 0;
 }

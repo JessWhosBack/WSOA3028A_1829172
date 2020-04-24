@@ -25,3 +25,12 @@ if (myHeader != null) {
         lastScrollTop = scrollTop;
     })
 }
+
+
+//  DIFFFERNET PICS DEPENDING ON WINDOW SIZE      
+//<picture>
+//    <source srcset="Images/Logo_Instagram.png" media="(max-width: 600px)">
+//    <source srcset="Images/Logo_Twitter.png" media="(max-width: 1500px)">
+//    <source srcset="Images/Logo_Email.png">
+//    <img src="Images/Logo_FacebookF.png" alt="Flowers">
+//</picture>
