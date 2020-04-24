@@ -115,7 +115,7 @@ header {
 }
 
 .header_nav a:hover{
-    background-color: purple;
+    background-color: #b4d2e7;
 }
 
 h1{
@@ -143,37 +143,24 @@ blockquote{
     text-align: center;
 }
 
-.blogTable{
-    border-collapse: collapse;
-}
-
-.blogTable td, th{
-    text-align: left;
-    padding: 8px;
-}
-
 .contactPageTable{
     display: table;
 }
-
 .contactPageTable a{
     display: table-cell;
     padding-left: 40pt;
     padding-right: 40pt;
 }
 
-
 .EmailForm label{
     text-align: left;
     display: block;
     width:40%
 }
-
 .EmailForm input[type=text], textarea{
     width:40%;
     display: block;
 }
-
 .EmailForm input[type=submit]{
     width:150pt;
     display: block;
@@ -182,44 +169,104 @@ blockquote{
 
 .BlogNav a{
     position: fixed;
-    
     transition: 0.3s;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 15px;
     padding-left: 15px;
-
     text-align: left;
     height: 20px;
     width: 13px;
-
     text-decoration: none;
     font-size: 20px;
     color: white;
-
     white-space: nowrap;
     overflow: hidden;
     top: 45%;
 }
-
 .BlogNav a[id="BlogNavNext"]{
     right: 0;
     border-radius: 8px 0px 0px 8px;
     background-color: #b4d2e7;
-
 }
-
 .BlogNav a[id="BlogNavPrev"]{
     left: 0;
     border-radius: 0px 8px 8px 0px;
     background-color: #94c5cc;
 }
-
 .BlogNav a[id="BlogNavNext"]:hover{
     width: 100px;
 }
-
 .BlogNav a[id="BlogNavPrev"]:hover{
     width: 140px;
 }
 
+.ButtonTest{
+    width: 30%;
+    margin-top: 5%;    
+    margin-left: 35%;    
+    margin-right: 35%;
+    padding: 20px 20px 20px 20px;
+    font-family:  "Cambria";
+    font-weight: bold;
+    color: black;
+    font-size: 20pt;
+    background: #b4d2e7;    
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 15px 15px 15px 15px;
+}
+.ButtonTest:hover{
+    color: white;
+    background: #94c5cc;
+}
+
+
+.blogTable{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    color: #0000cc;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 15pt;
+}
+.blogTable th:nth-child(1){
+    width: 8%;
+    padding: 8pt 8pt 8pt 8pt;
+    border-style: solid;
+    border-color: black;
+    border-width: 1pt 0pt;
+}
+.blogTable th:nth-child(2){
+    width: 20%;
+    padding: 8pt 8pt 8pt 8pt;
+    border-style: solid;
+    border-color: black;
+    border-width: 1pt 0pt;
+}
+
+.blogTable th:nth-child(3){
+    width: 20%;
+    padding: 8pt 8pt 8pt 8pt;
+    border-style: solid;
+    border-color: black;
+    border-width: 1pt 0pt;
+}
+
+.blogPageButton{
+    width: 100%;
+    font-family:  "Cambria";
+    font-weight: bold;
+    padding: 5%;
+    color: black;
+    background: #b4d2e7;    
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 5px 5px 5px 5px;
+}
+.blogPageButton:hover{
+    color: white;
+    background: #94c5cc;
+}
