@@ -11,6 +11,13 @@ if (myBlogPageButtons != null) {
     }
 }
 
+let myAboutPageButtons = document.getElementsByClassName("AboutMePageButton")
+if (myAboutPageButtons != null) {
+    for (let i = 0; i < myAboutPageButtons.length; i++) {
+        myAboutPageButtons[i].style.cursor = "pointer";
+    }
+}
+
 let lastScrollTop = 0;
 let myHeader = document.querySelector("header");
 if (myHeader != null) {
