@@ -149,8 +149,17 @@ figure{
     margin:0;
 }
 
+iframe{
+    width: 100%;
+    padding-top: 10pt;
+}
+object{
+    width: 100%;
+    padding-top: 10pt;
+}
 blockquote{
     text-align: center;
+    font-style: italic;
 }
 
 .contactPageTable{
@@ -216,11 +225,11 @@ blockquote{
     margin-top: 5%;    
     margin-left: 35%;    
     margin-right: 35%;
-    padding: 20px 20px 20px 20px;
+    padding: 2% 2% 2% 2%;
     font-family:  "Cambria";
     font-weight: bold;
     color: black;
-    font-size: 20pt;
+    font-size: 2vw;
     background: #b4d2e7;    
     border-style: outset;
     border-width: 5px;
@@ -302,4 +311,19 @@ blockquote{
 .MemeTable_3 td{
     text-align: center;
     padding: 50% 0 0 0;
+}
+
+.DomainNameTable{
+    border-collapse: collapse;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.DomainNameTable, .DomainNameTable td, .DomainNameTable tr, .DomainNameTable th{
+    border-width: 1pt;
+    border-style: solid;
+    border-color: black;
+}
+.DomainNameTable td:nth-child(2), .DomainNameTable td:nth-child(3), .DomainNameTable th:nth-child(2), .DomainNameTable th:nth-child(3){
+    text-align: center;
 }
