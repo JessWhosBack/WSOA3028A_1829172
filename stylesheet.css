@@ -15,10 +15,12 @@ body{
 }
 
 article {
-    padding-right: 10%;
-    padding-left: 10%;
+    max-width: 60rem;
     text-align: justify;
     text-justify: distribute;    
+    align-self: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 section[class="NewSection"]{
@@ -131,8 +133,10 @@ h2{
 .topSection{
     text-align: center;
     padding-top: 75px;
-    padding-right: 10%;
-    padding-left: 10%;
+    max-width: 60rem;
+    align-self: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 nav{
@@ -343,4 +347,36 @@ blockquote{
 .AboutMePageButton:hover{
     color: white;
     background: #94c5cc;
+}
+
+.EmphasisContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.EmphasisHeading{
+    text-align: left;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.EmphasisParagraph{
+    text-align: left;
+    max-width: 48%;
+    min-width: 20rem;
+}
+
+.BoldRed{
+    color: darkred;
+    font-size: calc(12px + 2vw);
+    text-align: center;
+}
+.BoldRed a{
+    font-size: calc(12px + 3vw);
+    font-weight: normal;
+}
+.BoldRed span{
+    font-size:  calc(12px + 4vw);;
+    font-weight: bolder;
 }
