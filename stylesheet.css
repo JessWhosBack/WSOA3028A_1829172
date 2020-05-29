@@ -8,8 +8,8 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    margin:0;
     padding: 0;
+    margin:0;
     padding-bottom: 60px;
     text-align: justify;
 }
@@ -21,10 +21,6 @@ article {
     align-self: center;
     padding-left: 5%;
     padding-right: 5%;
-}
-
-section[class="NewSection"]{
-    display: inline-block;
 }
 
 footer {
@@ -121,15 +117,19 @@ header {
 }
 
 h1{
+    font-size: calc(20px + 3vw);
     text-align: center;
     color: #0000cc;
-    font-size: xxx-large;
 }
 
 h2{
     text-align: left;
+    font-size: calc(16px + 2vw);
 }
 
+h3{
+    font-size: calc(12px + 1.5vw);
+}
 .topSection{
     text-align: center;
     padding-top: 75px;
@@ -145,7 +145,7 @@ nav{
 
 img{
     width: 100%;
-    padding: 10pt;
+    padding: 2%;
 }
 
 figure{
@@ -153,6 +153,13 @@ figure{
     margin:0;
 }
 
+ul{
+    text-align: left;
+}
+
+ol{
+    text-align: left;
+}
 iframe{
     width: 100%;
     padding-top: 10pt;
@@ -193,15 +200,12 @@ blockquote{
 .BlogNav a{
     position: fixed;
     transition: 0.3s;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 1.5vw;
     text-align: left;
-    height: 20px;
-    width: 13px;
+    height: 2.5%;
+    width: 1vw;
     text-decoration: none;
-    font-size: 20px;
+    font-size: calc(12px + 1vw);
     color: white;
     white-space: nowrap;
     overflow: hidden;
@@ -209,19 +213,19 @@ blockquote{
 }
 .BlogNav a[id="BlogNavNext"]{
     right: 0;
-    border-radius: 8px 0px 0px 8px;
+    border-radius: 1vw 0 0 1vw;
     background-color: #b4d2e7;
 }
 .BlogNav a[id="BlogNavPrev"]{
     left: 0;
-    border-radius: 0px 8px 8px 0px;
+    border-radius: 0 1vw 1vw 0;
     background-color: #94c5cc;
 }
 .BlogNav a[id="BlogNavNext"]:hover{
-    width: 100px;
+    width: 10%;
 }
 .BlogNav a[id="BlogNavPrev"]:hover{
-    width: 140px;
+    width: 14%;
 }
 
 .ButtonTest{
@@ -287,35 +291,6 @@ blockquote{
     background: #94c5cc;
 }
 
-.MemeTable_1, .MemeTable_2, .MemeTable_3{
-    width: 100%;
-}
-.MemeTable_1 td:nth-child(1){
-    width: 32%;
-    border-width: 1pt 0pt;
-}
-.MemeTable_1 td:nth-child(2){
-    vertical-align: top;
-}
-.MemeTable_1 tr td img{
-    margin:0;
-    padding: 0;
-}
-.MemeTable_2 tr td img{
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-right: 15%;
-    padding-left: 15%;
-    width: 70%;
-}
-.MemeTable_2 td:nth-child(1){
-    width: 50%;
-}
-.MemeTable_3 td{
-    text-align: center;
-    padding: 50% 0 0 0;
-}
 
 .DomainNameTable{
     border-collapse: collapse;

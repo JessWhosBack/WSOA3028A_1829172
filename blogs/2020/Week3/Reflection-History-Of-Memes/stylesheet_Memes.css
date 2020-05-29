@@ -1,0 +1,40 @@
+img{
+    padding: 0;
+    margin: 0;
+}
+figure{
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+}
+div .item1{
+    width: 40%;
+    min-width: 20rem;
+}
+div .item2{
+    width: 54%;
+    min-width: 20rem;   
+}
+div .item2_Left{
+    width: 50%;
+    min-width: 20rem;   
+}
+.square_Item{
+    width: 46%;
+    min-width: 20rem;
+    padding: 2%;
+}
+.MemeTable_3{
+    width: 100%;
+}
+.MemeTable_3 td{
+    text-align: center;
+    padding: 50% 0 0 0;
+}
