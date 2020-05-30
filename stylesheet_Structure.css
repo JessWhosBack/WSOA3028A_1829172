@@ -46,7 +46,7 @@ header nav ul li a{
     height: 50px;
     line-height: 50px;
     padding: 0;
-    width: 100px;
+    width: 12vw;
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -68,20 +68,23 @@ header nav ul li a.active{
     display: none;
 }
 
-@media (max-width: 720px){
+@media (max-width: 650px){
     header{
         padding: 0 20px;
     }
     header nav{
+        display: none;
         position: absolute;
         width: 40%;
         background-color: #a1a6b4;
         top: 50px;
         right: -100%;
-        transition: 0.5s;
+        /*transition: 1s; THIS DOES NOTHING NEED TO FIX*/
+
     }
     header nav.active{
         right: 0;
+        display: block;
     }
     header nav ul{
         display: block;
