@@ -32,12 +32,37 @@ if (myHeader != null) {
         lastScrollTop = scrollTop;
     })
 }
+let header_Fixed = document.getElementsByClassName("header_fixed")[0];
+
+if (header_Fixed != null) {
+    header_Fixed.style.cursor = "pointer";
+}
+function smallWidth(winWidth) {
+    if (winWidth.matches) {
+        if (header_Fixed != null) {
+            header_Fixed.innerHTML = "<a>E<span>B</span></a>";
+        }
+    } else {
+        if (header_Fixed != null) {
+            header_Fixed.innerHTML = "<a>EDDIE<span>BLOGS</span></a>";
+        }
+    }
+}
+
+let winWidth = window.matchMedia("(max-width: 720px)");
+smallWidth(winWidth);
+winWidth.addListener(smallWidth);
 
 
-//  DIFFFERNET PICS DEPENDING ON WINDOW SIZE      
-//<picture>
-//    <source srcset="Images/Logo_Instagram.png" media="(max-width: 600px)">
-//    <source srcset="Images/Logo_Twitter.png" media="(max-width: 1500px)">
-//    <source srcset="Images/Logo_Email.png">
-//    <img src="Images/Logo_FacebookF.png" alt="Flowers">
-//</picture>
+
+
+let menuToggleButton = document.getElementsByClassName("menu-toggle")[0];
+let header_Nav = document.getElementsByClassName("header_nav")[0];
+if (menuToggleButton != null) {
+    menuToggleButton.style.cursor = "pointer";
+    menuToggleButton.addEventListener("click", function () {
+        if (header_Nav != null) {
+            header_Nav.classList.toggle("active");
+        }
+    });
+}

@@ -116,6 +116,42 @@ header {
     background-color: #b4d2e7;
 }
 
+@media(max-width: 720px){
+    body{
+        background-color: red;
+    }
+
+    .header_nav{
+        float: right;
+        display: table;
+    }
+    .header_nav a{
+        display: table-cell;
+        width: 1px;
+        height: 75px;
+        background-color: #a1a6b4;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        font-family: "Cambria";
+        font-size: 16pt;
+    }
+    
+    .header_nav a:hover{
+        color:#0000cc;
+    }
+    
+    .header_nav a:hover{
+        background-color: #b4d2e7;
+    }
+    
+
+
+
+
+}
+
 h1{
     font-size: calc(20px + 3vw);
     text-align: center;
