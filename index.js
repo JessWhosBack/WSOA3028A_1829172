@@ -25,7 +25,7 @@ if (myHeader != null) {
 
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
-            myHeader.style.top = "-75px";
+            myHeader.style.top = "-60px";
         } else {
             myHeader.style.top = "0";
         }

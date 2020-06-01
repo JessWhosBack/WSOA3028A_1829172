@@ -3,6 +3,7 @@
 
 <head>
     <title>Blog: Alan Turing</title>
+    <link rel="stylesheet" href="../../../../stylesheet_Structure.css" />
     <link rel="stylesheet" href="../../../../stylesheet.css" />
     <script type="module" src="../../../../index.js" async></script>
 
@@ -14,33 +15,18 @@
 
 <body>
     <header>
-        <section class="header_inner">
-            <section class="header_fixed">
-                <a href="../../../../" title="Home Page">EDDIE<span>BLOGS</span></a>
-            </section>
-
-            <section class="header_nav">
-                <a href="../../../../About-Me/">
-                    About Me
-                </a>
-                <a href="../../../../Contact-Me/">
-                    Contact Me
-                </a>
-                <a href="../../../../blogs/">
-                    My Blogs
-                </a>
-            </section>
-        </section>
+        <div class="logo">EDDIE<span>BLOGS</span></div>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../../../">Home</a></li>
+                <li><a href="../../../../About-Me/">About Me</a></li>
+                <li><a href="../../../../Contact-Me/">Contact Me</a></li>
+                <li><a href="../../../../blogs/">My Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle"><img src="Images/menu_Mobile.png"></div>
+        </div>
     </header>
-    <section class="topSection">
-        <h1>
-            Reflection of the week: Alan Turing
-        </h1>
-
-        <p style="text-align: right">
-            By Jesse van der Merwe, <time datetime="2020-02-14T18:00+02:00">14th of February 2020</time>
-        </p>
-    </section>
     <section class="BlogNav" id="BlogNav">
         <a id="BlogNavNext" href="../../Week3/Reflection-History-Of-Memes/">
             + Next Blog
@@ -50,8 +36,11 @@
         </a>
     </section>
     <article>
+        <h1> Reflection of the week: Alan Turing</h1>
+        <p style="text-align: right">
+            By Jesse van der Merwe, <time datetime="2020-02-14T18:00+02:00">14th of February 2020</time>
+        </p>
         <h2>Important things to know</h2>
-
         <section>
             <h3>About Alan Turing</h3>
             <p>
@@ -67,28 +56,28 @@
             <p>
                 During World War II, Turing was most famed for deciphering the German Enigma encrypted signals,
                 through the invention of the ‘bombe’ electromechanical device. According to biography.com:
-                <blockquote><i>
-                        He [Turing] also wrote two papers about mathematical approaches to code-breaking, which
-                        became such important assets to the Code and Cypher School (later known as the Government
-                        Communications Headquarters) that the GCHQ waited until April 2012 to
-                        release them to the National Archives of the United Kingdom.
-                        <a href="#ref3" title="Turing Machines">[3]</a>
-                    </i></blockquote>
-                Turing further explored the issue of artificial intelligence in a paper written in 1950 – “Computing
-                machinery and intelligence” – in which he proposed an experiment known as the Turing Test
-                <a href="#ref3" title="Turing Machines">[3]</a> <a href="# TuringTest">(see below)</a>.
+            <blockquote><i>
+                    He [Turing] also wrote two papers about mathematical approaches to code-breaking, which
+                    became such important assets to the Code and Cypher School (later known as the Government
+                    Communications Headquarters) that the GCHQ waited until April 2012 to
+                    release them to the National Archives of the United Kingdom.
+                    <a href="#ref3" title="Turing Machines">[3]</a>
+                </i></blockquote>
+            Turing further explored the issue of artificial intelligence in a paper written in 1950 – “Computing
+            machinery and intelligence” – in which he proposed an experiment known as the Turing Test
+            <a href="#ref3" title="Turing Machines">[3]</a> <a href="# TuringTest">(see below)</a>.
             </p>
             <p>
                 Since Homosexuality was illegal in the United Kingdom in the early 1950s, Turing was arrested and
                 charged with gross indecency.
-                <blockquote><i>
-                        Following his arrest, Turing was forced to choose between temporary probation on the
-                        condition that he receive hormonal treatment for libido reduction, or imprisonment. He chose
-                        the former, and soon underwent chemical castration through injections of a synthetic
-                        oestrogen hormone for a year, which eventually rendered him impotent.<a href="#ref3"
-                            title="Turing Machines">[3]</a>
-                    </i></blockquote>
-                Turing committed suicide on the 7th of June, 1954.
+            <blockquote><i>
+                    Following his arrest, Turing was forced to choose between temporary probation on the
+                    condition that he receive hormonal treatment for libido reduction, or imprisonment. He chose
+                    the former, and soon underwent chemical castration through injections of a synthetic
+                    oestrogen hormone for a year, which eventually rendered him impotent.<a href="#ref3"
+                        title="Turing Machines">[3]</a>
+                </i></blockquote>
+            Turing committed suicide on the 7th of June, 1954.
             </p>
             <p>
                 IT ONLY TOOK THE BRITTISH GOVERNMENT <b>FIFTY-FIVE FUCKING YEARS</b> FOR THE FOLLOWING TO OCCUR:
@@ -118,12 +107,12 @@
                 (such as 0 and 1) can be written and read from this tape. The machine can, at any stage, be in only
                 one of a finite number of states. The next state is determined by what is read off the tape, as well
                 as the rules that correspond to its current state.
-                <blockquote><i>
-                        For example, the finite state machine in the diagram has three states. If the machine is in
-                        state 1, then an A moves it to state 2 and a B moves it to state 3 <a href="#ref1"
-                            title="Alan Turing Biography">[1]</a>
-                        .
-                    </i></blockquote>
+            <blockquote><i>
+                    For example, the finite state machine in the diagram has three states. If the machine is in
+                    state 1, then an A moves it to state 2 and a B moves it to state 3 <a href="#ref1"
+                        title="Alan Turing Biography">[1]</a>
+                    .
+                </i></blockquote>
             </p>
             <p>
                 The Turing Machine, however, is capable of three types of actions <a href="#ref2"
@@ -149,32 +138,32 @@
 
             <section>
                     <h3><a id=" TuringTest" title="Turing Test">The Turing Test</a></h3>
-                <p>
-                    The Turing Test refers to a proposal made by Alan Turing in his paper, “Computing Machinery
-                    and Intelligence” written in 1952, in order to answer whether machines can think. According to
-                    Turing, the question of whether machines can think or not is actually in itself “too
-                    meaningless” to deserve discussion.<a href=" #ref3" title="Turing Machines">[3]</a>
-                    Turing himself comes up with a new ‘question’ which can be described in terms of a game:
-                    <br>
-                    <blockquote><i>
-                            The “imitation game” is played with three people, a man (A), a woman (B), and an
-                            interrogator (C) who may be of either sex. The interrogator stays in a room apart
-                            from the other two. The object of the game for the interrogator is to determine
-                            which of the other tow is the man and which is the woman. He knows them by labels X,
-                            and Y, and at the end of the game he says either “X is A and Y is B” or “X is B and
-                            Y is A”. The interrogator is allowed to put questions to A and B. It is A’s object
-                            in the game to try and cause C to make the wrong identification. The object of the
-                            game for B is to help the interrogator. We now ask the question, “What will happen
-                            when a machine takes the part of A in this game?” Will the interrogator decide
-                            wrongly as often when the game is played like this as he does when the game is
-                            played between a man and a woman? These questions replace our original, “Can
-                            machines think?”<a href="#ref4" title="The Turing Test">[4]</a>
-                        </i></blockquote>
-                    <br>
-                    Turing goes on to describe the “Universality of Digital Computers” and mentions how
-                    important machines and modern digital computers are currently and (more importantly) are going
-                    to be.
-                </p>
+            <p>
+                The Turing Test refers to a proposal made by Alan Turing in his paper, “Computing Machinery
+                and Intelligence” written in 1952, in order to answer whether machines can think. According to
+                Turing, the question of whether machines can think or not is actually in itself “too
+                meaningless” to deserve discussion.<a href=" #ref3" title="Turing Machines">[3]</a>
+                Turing himself comes up with a new ‘question’ which can be described in terms of a game:
+                <br>
+            <blockquote><i>
+                    The “imitation game” is played with three people, a man (A), a woman (B), and an
+                    interrogator (C) who may be of either sex. The interrogator stays in a room apart
+                    from the other two. The object of the game for the interrogator is to determine
+                    which of the other tow is the man and which is the woman. He knows them by labels X,
+                    and Y, and at the end of the game he says either “X is A and Y is B” or “X is B and
+                    Y is A”. The interrogator is allowed to put questions to A and B. It is A’s object
+                    in the game to try and cause C to make the wrong identification. The object of the
+                    game for B is to help the interrogator. We now ask the question, “What will happen
+                    when a machine takes the part of A in this game?” Will the interrogator decide
+                    wrongly as often when the game is played like this as he does when the game is
+                    played between a man and a woman? These questions replace our original, “Can
+                    machines think?”<a href="#ref4" title="The Turing Test">[4]</a>
+                </i></blockquote>
+            <br>
+            Turing goes on to describe the “Universality of Digital Computers” and mentions how
+            important machines and modern digital computers are currently and (more importantly) are going
+            to be.
+            </p>
         </section>
 
         <section>
@@ -233,7 +222,7 @@
 
             <img src=" ./ImitationGame_Movie.jpg" alt="Picture of the characters from The Imitation Game"
                 style="width:100%">
-            <p>Image from: <a
+            <p style="text-align: left;">Image from: <a
                     href="https://api.time.com/wp-content/uploads/2014/11/imitation-game.jpg?w=943&quality=85">
                     https://api.time.com/wp-content/uploads/2014/11/imitation-game.jpg?w=943&quality=85 </a>
             </p>

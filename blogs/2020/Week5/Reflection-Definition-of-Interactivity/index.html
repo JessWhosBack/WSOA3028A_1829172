@@ -5,6 +5,7 @@
 <head>
     <title>Blog: Definition of Interactivity</title>
 
+    <link rel="stylesheet" href="../../../../stylesheet_Structure.css" />
     <link rel="stylesheet" href="../../../../stylesheet.css" />
     <script type="module" src="../../../../index.js" async></script>
 
@@ -16,32 +17,18 @@
 
 <body>
     <header>
-        <section class="header_inner">
-            <section class="header_fixed">
-                <a href="../../../../" title="Home Page">EDDIE<span>BLOGS</span></a>
-            </section>
-
-            <section class="header_nav">
-                <a href="../../../../About-Me/">
-                    About Me
-                </a>
-                <a href="../../../../Contact-Me/">
-                    Contact Me
-                </a>
-                <a href="../../../../blogs/">
-                    My Blogs
-                </a>
-            </section>
-        </section>
+        <div class="logo">EDDIE<span>BLOGS</span></div>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../../../">Home</a></li>
+                <li><a href="../../../../About-Me/">About Me</a></li>
+                <li><a href="../../../../Contact-Me/">Contact Me</a></li>
+                <li><a href="../../../../blogs/">My Blogs</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle"><img src="Images/menu_Mobile.png"></div>
+        </div>
     </header>
-    <section class="topSection">
-        <h1>
-            Reflection of the week: Definition of Interactivity
-        </h1>
-        <p style="text-align: right">
-            By Jesse van der Merwe, <time datetime="2020-03-05T11:00+02:00">5th of March 2020</time>
-        </p>
-    </section>
     <section class="BlogNav" id="BlogNav">
         <a id="BlogNavNext" href="../../Week10/Character-Background/">
             + Next Blog
@@ -51,6 +38,12 @@
         </a>
     </section>
     <article>
+        <h1>
+            Reflection of the week: Definition of Interactivity
+        </h1>
+        <p style="text-align: right">
+            By Jesse van der Merwe, <time datetime="2020-03-05T11:00+02:00">5th of March 2020</time>
+        </p>
         <section>
             <p>
                 This is a reflection based, first, on part of the lecture “Interaction and the www” from Interactive
@@ -74,19 +67,19 @@
                         paper, “What is interactivity” <a href="#ref2" title="What is Interactivity?">[2]</a>, he
                         develops his theory of interactivity as mutual responsiveness and states that something is
                         interactive if and only if it:
-                        <figure>
-                            <img style="max-width:600px; float:right" src="./AaronProfile_PhilPeople.png"
-                                alt="Picture of Aaron Smuts' cover image and profile picture on the website philpeople.org">
-                        </figure>
-                        <ol>
-                            <li>Is responsive</li>
-                            <li>Does not completely control</li>
-                            <li>Is not completely controlled</li>
-                            <li>Does not respond in a completely random fashion</li>
-                        </ol>
+                    <figure>
+                        <img style="max-width:600px; float:right" src="./AaronProfile_PhilPeople.png"
+                            alt="Picture of Aaron Smuts' cover image and profile picture on the website philpeople.org">
+                    </figure>
+                    <ol>
+                        <li>Is responsive</li>
+                        <li>Does not completely control</li>
+                        <li>Is not completely controlled</li>
+                        <li>Does not respond in a completely random fashion</li>
+                    </ol>
 
-                        P.S. Please admire Aaron Smuts' cover image and profile picture from <a
-                            href="https://philpeople.org/profiles/aaron-smuts" target="_blank">philpeople.org</a>.
+                    P.S. Please admire Aaron Smuts' cover image and profile picture from <a
+                        href="https://philpeople.org/profiles/aaron-smuts" target="_blank">philpeople.org</a>.
                     </p>
                 </section>
                 <section>
@@ -95,19 +88,19 @@
                     </h3>
                     <p>
                         Dr. Lev Manovich <a href="#ref3" title="Lev Manovich - About Lev Manovich">[3]</a>:
-                        <ul>
-                            <li>Presidential Professor, The Graduate Center, City University of New York</li>
-                            <li>Founder and Director of the Cultural Analytics Lab</li>
-                            <li>Member of the PhD Program in Computer Science, MS Program in Data Analysis and
-                                Visualization and MA Program in Digital Humanities</li>
-                        </ul>
-                        In his book, “The Language of New Media” <a href="#ref4"
-                            title="The Language of New Media">[4]</a>, Lev states that “as with digital, I
-                        avoid using the world interactive in this book without qualifying it, for the same reason – I
-                        find the concept to be too broad to be truly useful… Once an object is represented in a
-                        computer, it automatically becomes interactive. Therefore, to call computer media ‘interactive’
-                        is meaningless – it simply means stating the most basic fact about computers” <a href="#ref4"
-                            title="The Language of New Media">[4]</a>.
+                    <ul>
+                        <li>Presidential Professor, The Graduate Center, City University of New York</li>
+                        <li>Founder and Director of the Cultural Analytics Lab</li>
+                        <li>Member of the PhD Program in Computer Science, MS Program in Data Analysis and
+                            Visualization and MA Program in Digital Humanities</li>
+                    </ul>
+                    In his book, “The Language of New Media” <a href="#ref4" title="The Language of New Media">[4]</a>,
+                    Lev states that “as with digital, I
+                    avoid using the world interactive in this book without qualifying it, for the same reason – I
+                    find the concept to be too broad to be truly useful… Once an object is represented in a
+                    computer, it automatically becomes interactive. Therefore, to call computer media ‘interactive’
+                    is meaningless – it simply means stating the most basic fact about computers” <a href="#ref4"
+                        title="The Language of New Media">[4]</a>.
                     </p>
                     <p>
                         He also proposes that interactivity is an illusion because the choices that a user can
@@ -128,21 +121,21 @@
                         IT University of Copenhagen. An extract from his book “We All Want to Change the World”
                         <a href="#ref5" title="We All Want to Change the World">[5]</a>
                         goes:
-                        <blockquote>
-                            <i>
-                                Rather than hiding some obscure theoretical meaning beneath the computer
-                                salesman rhetoric, “interactive” has two relatively clear connotations. First,
-                                it means computerized, digital, online, etc. Replace any occurrence of
-                                “interactive” with “digital,” and the meaning of the sentence changes very
-                                little, if at all. The other connotation, following the batch/interactive
-                                evolution, is “better.” Implicitly in most uses of the word is the idea that the
-                                “interactive” object is simply better than its “noninteractive” counterpart.
-                            </i>
-                        </blockquote>
-                        He further mentions that he tries to refrain from using the word ‘interactive’, preferring
-                        instead to use the term ‘ergodic’. He defines ‘ergodic’ literature as texts where,
-                        “nontrivial effort is required to allow the reader to traverse the text” <a href="#ref5"
-                            title="We All Want to Change the World">[5]</a>.
+                    <blockquote>
+                        <i>
+                            Rather than hiding some obscure theoretical meaning beneath the computer
+                            salesman rhetoric, “interactive” has two relatively clear connotations. First,
+                            it means computerized, digital, online, etc. Replace any occurrence of
+                            “interactive” with “digital,” and the meaning of the sentence changes very
+                            little, if at all. The other connotation, following the batch/interactive
+                            evolution, is “better.” Implicitly in most uses of the word is the idea that the
+                            “interactive” object is simply better than its “noninteractive” counterpart.
+                        </i>
+                    </blockquote>
+                    He further mentions that he tries to refrain from using the word ‘interactive’, preferring
+                    instead to use the term ‘ergodic’. He defines ‘ergodic’ literature as texts where,
+                    “nontrivial effort is required to allow the reader to traverse the text” <a href="#ref5"
+                        title="We All Want to Change the World">[5]</a>.
                     </p>
                     <p>
                         However, the question of “what is nontrivial” is not an easy one to answer. As explored in
@@ -162,16 +155,16 @@
                     </p>
                     <p>
                         Something is interactive if it:
-                        <ul>
-                            <li>Is responsive</li>
-                            <li>Does not respond in a completely random fashion</li>
-                            <li>Requires non trivial effort</li>
-                            <li>Which, in some way, modifies the shape of the text itself</li>
-                        </ul>
-                        She further explains that it is important to have a working definition for this course
-                        (Interactive Media 3A) but it is also just as important to keep trying to make our own
-                        personal
-                        working definitions.
+                    <ul>
+                        <li>Is responsive</li>
+                        <li>Does not respond in a completely random fashion</li>
+                        <li>Requires non trivial effort</li>
+                        <li>Which, in some way, modifies the shape of the text itself</li>
+                    </ul>
+                    She further explains that it is important to have a working definition for this course
+                    (Interactive Media 3A) but it is also just as important to keep trying to make our own
+                    personal
+                    working definitions.
                     </p>
                 </section>
             </subsection>
