@@ -66,3 +66,28 @@ if (menuToggleButton != null) {
         }
     });
 }
+
+
+let dropDown_Week = document.getElementsByClassName("week");
+let dropDown_Item = document.getElementsByClassName("blogItem");
+let dropDown_Arrow = document.getElementsByClassName("arrowPNG");
+
+let b = true;
+for (let i = 0; i < dropDown_Week.length; i++) {
+    if (dropDown_Week[i] != null) {
+        dropDown_Week[i].style.cursor = "pointer";
+        dropDown_Week[i].addEventListener("click", function () {
+            if (dropDown_Item[i] != null) {
+                dropDown_Item[i].classList.toggle("active");
+                if (b) {
+                    dropDown_Arrow[i].setAttribute("style", "transform:rotate(180deg");
+                    b = false;
+                }
+                else {
+                    dropDown_Arrow[i].setAttribute("style", "transform:rotate(0deg)");
+                    b = true;
+                }
+            }
+        });
+    }
+}

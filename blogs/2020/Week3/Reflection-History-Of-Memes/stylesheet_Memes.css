@@ -37,3 +37,9 @@ div .item2_Left{
     text-align: center;
     padding: 50% 0 0 0;
 }
+.row_kermit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
