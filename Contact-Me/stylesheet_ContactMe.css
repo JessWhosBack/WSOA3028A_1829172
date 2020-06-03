@@ -1,0 +1,37 @@
+
+.contactPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 20%;
+}
+
+.contactPage a, .contactPage a:visited{
+    display: block;
+    width: 30%;
+    text-decoration: none;
+}
+.contactPage img{
+    display: block;
+    max-width: 130px;
+}
+
+.EmailForm{
+    padding-bottom: 10%;
+}
+.EmailForm label{
+    text-align: left;
+    display: block;
+    width:40%;
+    min-width: 200px;
+}
+.EmailForm input[type=text], textarea{
+    width:40%;
+    display: block;
+    min-width: 200px;
+}
+.EmailForm input[type=submit]{
+    width:150pt;
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

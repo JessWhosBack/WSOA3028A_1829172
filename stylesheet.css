@@ -29,30 +29,6 @@ blockquote{
     font-style: italic;
 }
 
-.contactPageTable{
-    display: table;
-}
-.contactPageTable a{
-    display: table-cell;
-    padding-left: 40pt;
-    padding-right: 40pt;
-}
-
-.EmailForm label{
-    text-align: left;
-    display: block;
-    width:40%
-}
-.EmailForm input[type=text], textarea{
-    width:40%;
-    display: block;
-}
-.EmailForm input[type=submit]{
-    width:150pt;
-    display: block;
-    font-family: "Cambria";
-}
-
 .BlogNav a{
     position: fixed;
     transition: 0.3s;
@@ -83,27 +59,6 @@ blockquote{
 .BlogNav a[id="BlogNavPrev"]:hover{
     width: 14%;
 }
-
-.ButtonTest{
-    width: 30%;
-    margin-top: 5%;    
-    margin-left: 35%;    
-    margin-right: 35%;
-    padding: 2% 2% 2% 2%;
-    font-family:  "Cambria";
-    font-weight: bold;
-    color: black;
-    font-size: 2vw;
-    background: #b4d2e7;    
-    border-style: outset;
-    border-width: 5px;
-    border-radius: 15px 15px 15px 15px;
-}
-.ButtonTest:hover{
-    color: white;
-    background: #94c5cc;
-}
-
 
 .blogTable{
     width: 70%;
@@ -210,4 +165,69 @@ blockquote{
 .BoldRed span{
     font-size:  calc(12px + 4vw);;
     font-weight: bolder;
+}
+
+
+
+
+
+.latestBlogContainer{
+    border-radius: 15px 15px 15px 15px;
+    background-color: #b4d2e7;
+    padding:2%;
+
+}
+.latestBlog{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.latestBlog h2{
+    padding: 0;
+    margin: 0;
+    padding-top: 2%;
+    width: 76%;
+}
+.latestBlog img{
+    width: 20%;
+    min-width: 100px;
+}
+@media (max-width: 600px){
+    .latestBlog h2{
+        padding: 0;
+        margin: 0;
+        padding-top: 2%;
+        width: 96%;
+    }
+
+    .latestBlog img{
+        width: 80%;
+        min-width: 100px;
+    }
+}
+.latestBlogContainer iframe{
+    height: 500px;
+}
+
+
+
+
+.ButtonTest{
+    width: 30%;
+    margin-top: 5%;    
+    margin-left: 35%;    
+    margin-right: 35%;
+    padding: 2% 2% 2% 2%;
+    font-weight: bold;
+    color: black;
+    font-size: 2vw;
+    background: #b4d2e7;    
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 15px 15px 15px 15px;
+}
+.ButtonTest:hover{
+    color: white;
+    background: #94c5cc;
 }

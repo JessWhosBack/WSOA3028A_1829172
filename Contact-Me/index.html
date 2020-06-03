@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../stylesheet_Structure.css" />
     <link rel="stylesheet" href="../stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet_ContactMe.css" />
+
     <script type="module" src="../index.js" async></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,28 +36,19 @@
         <center>
             <h2 style="text-align: center;">Here are the social media sites that I am on:</h2>
             (not really, I've only made an Instagram profile... but one can dream)
-
-
-            <figure class="contactPageTable">
+            <figure class="contactPage">
                 <a href="https://www.instagram.com/eddieblogssa/" target="_blank">
-                    <img style="padding:15px; max-width: 100px;" src="../Images/Logo_Instagram.png" alt="Instagram Logo"
-                        title="Eddie's Instagram">
+                    <img src="../Images/Logo_Instagram.png" alt="Instagram Logo" title="Eddie's Instagram">
                 </a>
                 <a href="">
-                    <img style="padding:15px; max-width: 100px;" src="../Images/Logo_FacebookThumb.png"
-                        alt="Facebook Logo" title="Eddie's Facebook">
+                    <img src="../Images/Logo_FacebookThumb.png" alt="Facebook Logo" title="Eddie's Facebook">
                 </a>
                 <a href="">
-                    <img style="padding:15px; max-width: 100px;" src="../Images/Logo_Twitter.png" alt="Twitter Logo"
-                        title="Eddie's Twitter">
+                    <img src="../Images/Logo_Twitter.png" alt="Twitter Logo" title="Eddie's Twitter">
                 </a>
             </figure>
-            <br>
-            <br>
-            <br>
+
             <h2 style="text-align: center;">Or you can drop me an email:</h2>
-
-
             <form onsubmit="window.location.href='mailto:eddieblogssa@gmail.com?subject='+ EmailForm.subject.value + '&body=' 
                     + EmailForm.body.value" name="EmailForm" method="GET" class="EmailForm">
                 <label>Name:</label>
@@ -67,7 +60,7 @@
                 <label>Message:</label>
                 <textarea name="body" rows="6"></textarea>
                 <br>
-                <input type="submit" value="Open Your Email Program">
+                <input type="submit" value="Open Your Email Program" class="button">
             </form>
         </center>
     </article>

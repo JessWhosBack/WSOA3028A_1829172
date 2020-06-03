@@ -8,15 +8,12 @@ body{
     width: 80%;
     align-self: center;
     align-items: center;
-    justify-content: center;
-
-    
+    justify-content: center;    
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-size: calc(24px + 1vw);
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,.2);
     margin-bottom: 2%;
 }
 .week img{

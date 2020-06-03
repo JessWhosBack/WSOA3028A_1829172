@@ -18,22 +18,38 @@ if (myAboutPageButtons != null) {
     }
 }
 
-let lastScrollTop = 0;
 let myHeader = document.querySelector("header");
 if (myHeader != null) {
-    window.addEventListener("scroll", function () {
-
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            myHeader.style.top = "-60px";
-        } else {
-            myHeader.style.top = "0";
+    if (window.location !== window.parent.location) {
+        myHeader.setAttribute("style", "display:none;");
+        let myFooter = document.querySelector("footer");
+        if (myFooter != null) {
+            myFooter.setAttribute("style", "display:none;");
         }
-        lastScrollTop = scrollTop;
-    })
-}
-let header_Fixed = document.getElementsByClassName("header_fixed")[0];
+    }
+    else {
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function () {
 
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                myHeader.style.top = "-60px";
+            } else {
+                myHeader.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        })
+    }
+
+}
+
+let logo = document.getElementsByClassName("logo")[0];
+if (logo != null) {
+    logo.style.cursor = "default";
+
+}
+/*
+let header_Fixed = document.getElementsByClassName("header_fixed")[0];
 if (header_Fixed != null) {
     header_Fixed.style.cursor = "pointer";
 }
@@ -48,13 +64,10 @@ function smallWidth(winWidth) {
         }
     }
 }
-
 let winWidth = window.matchMedia("(max-width: 720px)");
 smallWidth(winWidth);
 winWidth.addListener(smallWidth);
-
-
-
+*/
 
 let menuToggleButton = document.getElementsByClassName("menu-toggle")[0];
 let header_Nav = document.getElementsByClassName("header_nav")[0];
@@ -66,7 +79,6 @@ if (menuToggleButton != null) {
         }
     });
 }
-
 
 let dropDown_Week = document.getElementsByClassName("week");
 let dropDown_Item = document.getElementsByClassName("blogItem");
@@ -91,3 +103,5 @@ for (let i = 0; i < dropDown_Week.length; i++) {
         });
     }
 }
+
+

@@ -24,8 +24,9 @@ article {
     align-self: center;
     padding-left: 5%;
     padding-right: 5%;
-    font-size: calc(12px + 0.8vw);
+    font-size: calc(16px + 0.5vw);
 }
+
 
 header{
     position: fixed;
@@ -41,6 +42,7 @@ header{
     font-family: 'Courier New', Courier, monospace;
     font-size: calc(8px + 1vw);
 }
+
 header .logo{
     color:#0000cc;
     height: 60px;
