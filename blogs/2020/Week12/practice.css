@@ -1,0 +1,69 @@
+figure{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+img{
+    max-width: 800px;
+}
+
+.wireframeGroup{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9{
+    width: 150px;
+    height: 150px;
+    background: #10b7ec;
+    border-radius: 5px;
+    float: left;
+    margin: 20px;
+    color: #fff;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.box1{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.box2{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.box3{
+    box-shadow: 0 0 15px hsla(100,50%,50%,1);
+}
+
+.box4{
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.box5{
+    box-shadow: inset 5px 3px 4px rgba(0,0,0,0.4);
+}
+
+.box6{
+    box-shadow: inset 0 0 20px #fff;
+}
+
+.box7{
+    box-shadow: inset 1px 1px 150px #000;
+}
+
+.box8{
+    box-shadow: inset 0 0 0 10px #10b7ec, inset 0 0 0 14px #fff;
+}
+
+.box9{
+    box-shadow: 5px 5px 0 #fff, 10px 10px 0 rgba(0,0,0,0.2);
+}                   
+                

@@ -48,6 +48,54 @@ if (logo != null) {
     logo.style.cursor = "default";
 
 }
+
+let footer = document.querySelector("footer");
+function smallWidth(winWidth) {
+    if (winWidth.matches) {
+        if (footer != null) {
+            let footerTextArray = footer.querySelector("nav").querySelectorAll("a");
+            for (let i = 0; i < footerTextArray.length; i++) {
+                let stringText = footer.querySelector("nav").querySelectorAll("a")[i].innerHTML;
+                switch (stringText) {
+                    case "Home Page":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Home";
+                        break;
+                    case "About Me":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "About";
+                        break;
+                    case "Contact Me":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Contact";
+                        break;
+                    case "My Blogs":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Blogs";
+                        break;
+                }
+            }
+        }
+    } else {
+        let footerTextArray = footer.querySelector("nav").querySelectorAll("a");
+        for (let i = 0; i < footerTextArray.length; i++) {
+            let stringText = footer.querySelector("nav").querySelectorAll("a")[i].innerHTML;
+            switch (stringText) {
+                case "Home":
+                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Home Page";
+                    break;
+                case "About":
+                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "About Me";
+                    break;
+                case "Contact":
+                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Contact Me";
+                    break;
+                case "Blogs":
+                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "My Blogs";
+                    break;
+            }
+        }
+    }
+}
+let winWidth = window.matchMedia("(max-width: 500px)");
+smallWidth(winWidth);
+winWidth.addListener(smallWidth);
 /*
 let header_Fixed = document.getElementsByClassName("header_fixed")[0];
 if (header_Fixed != null) {
