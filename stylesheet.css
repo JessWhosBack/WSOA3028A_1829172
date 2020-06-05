@@ -238,3 +238,9 @@ blockquote{
     color: white;
     background: #94c5cc;
 }
+
+
+.charDev{
+    display: flex;
+    flex-wrap: wrap;
+}
