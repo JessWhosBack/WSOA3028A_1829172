@@ -136,6 +136,19 @@ blockquote{
 }
 
 .EmphasisContainer{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 5%;
+}
+
+@media(max-width:600px){
+    .EmphasisContainer{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+}
+.EmphasisContainer2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -148,9 +161,9 @@ blockquote{
 }
 
 .EmphasisParagraph{
+    display: grid;
+
     text-align: left;
-    max-width: 48%;
-    min-width: 20rem;
 }
 
 .BoldRed{

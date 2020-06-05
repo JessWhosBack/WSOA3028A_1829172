@@ -1,11 +1,13 @@
 body{
     text-align: left;
 }
+
 .week{
     display: flex;
     height: 50px;
     background-color: #a1a6b4;
     width: 80%;
+    max-width: 80rem;
     align-self: center;
     align-items: center;
     justify-content: center;    
@@ -26,13 +28,15 @@ body{
 .blogItem{
     display: none;
     flex-direction: row;
-    width: 80%;
+    max-width: 80rem;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
     align-items: flex-start;
     justify-content: space-evenly;
     z-index: 1;
     flex-wrap: wrap;
-    padding-right: 10%;
-    padding-left: 10%;
+    align-self: center;
 }
 
 .blogItem.active{
@@ -55,6 +59,6 @@ body{
 .blogItem img{
     margin: 0;
     padding: 0;
-    width: 20rem;
-    max-width: 80%;
+    width: 40rem;
+    max-width: 100%;
 }

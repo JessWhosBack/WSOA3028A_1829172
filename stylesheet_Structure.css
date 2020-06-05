@@ -18,15 +18,15 @@ body{
 }
 
 article {
-    max-width: 60rem;
+    max-width: 70rem;
     text-align: justify;
     text-justify: distribute;    
     align-self: center;
     padding-left: 5%;
     padding-right: 5%;
     font-size: calc(16px + 0.5vw);
+    width: 90%;
 }
-
 
 header{
     position: fixed;
