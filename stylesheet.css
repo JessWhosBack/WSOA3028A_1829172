@@ -166,8 +166,8 @@ blockquote{
     text-align: center;
 }
 .BoldRed a{
-    font-size: calc(12px + 3vw);
-    font-weight: normal;
+    text-decoration: none;
+    color: darkred;
 }
 .BoldRed span{
     font-size:  calc(12px + 4vw);;
