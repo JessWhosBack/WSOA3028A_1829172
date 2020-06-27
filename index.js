@@ -96,26 +96,6 @@ function smallWidth(winWidth) {
 let winWidth = window.matchMedia("(max-width: 500px)");
 smallWidth(winWidth);
 winWidth.addListener(smallWidth);
-/*
-let header_Fixed = document.getElementsByClassName("header_fixed")[0];
-if (header_Fixed != null) {
-    header_Fixed.style.cursor = "pointer";
-}
-function smallWidth(winWidth) {
-    if (winWidth.matches) {
-        if (header_Fixed != null) {
-            header_Fixed.innerHTML = "<a>E<span>B</span></a>";
-        }
-    } else {
-        if (header_Fixed != null) {
-            header_Fixed.innerHTML = "<a>EDDIE<span>BLOGS</span></a>";
-        }
-    }
-}
-let winWidth = window.matchMedia("(max-width: 720px)");
-smallWidth(winWidth);
-winWidth.addListener(smallWidth);
-*/
 
 let menuToggleButton = document.getElementsByClassName("menu-toggle")[0];
 let header_Nav = document.getElementsByClassName("header_nav")[0];
@@ -151,5 +131,3 @@ for (let i = 0; i < dropDown_Week.length; i++) {
         });
     }
 }
-
-

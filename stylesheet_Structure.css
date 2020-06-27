@@ -51,9 +51,18 @@ header .logo{
     float: left;
     font-weight: bold;
 }
+header .logo a{
+    text-decoration: none;
+}
+header .logo a:hover{
+    color:white;
+}
 header .logo span{
     font-weight: 800;
     color: #fff;
+}
+header .logo span:hover{
+    color:#0000cc;
 }
 header nav{
     float: right;
