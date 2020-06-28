@@ -68,7 +68,7 @@ function sendFileToCloudVision(content) {
         data: JSON.stringify(request),
         contentType: 'application/json'
     }).fail(function (jqXHR, textStatus, errorThrown) {
-        $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
+        $('#results').text('ERROR(S): ' + textStatus + ' ' + errorThrown + ' please try again!');
     }).done(displayJSON);
 }
 
@@ -103,7 +103,6 @@ function displayJSON(data) {
                 count++;
             }
             break;
-
         //FACE CODE ------------------------------------------------------------
         case "FACE_DETECTION":
             let face = data.responses[0].faceAnnotations;
@@ -116,8 +115,7 @@ function displayJSON(data) {
                 count++;
             }
             break;
-
-        //LOGO CODE ------------------------------------------------------------
+        //LOGO CODE -------------------------------------------------------------------------------------
         case "LOGO_DETECTION":
             let logo = data.responses[0].logoAnnotations;
             for (let key in logo) {
@@ -125,7 +123,7 @@ function displayJSON(data) {
                 count++;
             }
             break;
-        //LABEL CODE ------------------------------------------------------------
+        //LABEL CODE ------------------------------------------------------------------------------------
         case "LABEL_DETECTION":
             let label = data.responses[0].labelAnnotations;
             for (let key in label) {
@@ -133,7 +131,7 @@ function displayJSON(data) {
                 count++;
             }
             break;
-        //TEXT CODE ------------------------------------------------------------
+        //TEXT CODE -------------------------------------------------------------------------------------
         case "TEXT_DETECTION":
             let text = data.responses[0].textAnnotations;
             for (let key in text) {
@@ -145,7 +143,7 @@ function displayJSON(data) {
                 resultHTML += "Detected language code: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
             }
             break;
-        //SAFE SEARCH CODE ------------------------------------------------------------
+        //SAFE SEARCH CODE ------------------------------------------------------------------------------
         case "SAFE_SEARCH_DETECTION":
             let safe = data.responses[0].safeSearchAnnotation;
             resultHTML += "Possibility of adult content: " + determineLikliness(safe.adult) + "<br>";
@@ -155,6 +153,7 @@ function displayJSON(data) {
             resultHTML += "Possibility of racy content: " + determineLikliness(safe.racy) + "<br>";
             count++;
             break;
+        //IMAGE PROPERTY CODE ---------------------------------------------------------------------------
         case "IMAGE_PROPERTIES":
             resultHTML += "See the original JSON results below"
             count = 1;
@@ -173,7 +172,6 @@ function displayJSON(data) {
     var contents = JSON.stringify(data[0], null, 4);
     $('#results_JSON').text(contents);
 }
-
 
 function resetResults() {
     document.getElementsByClassName("formattedResults")[0].innerHTML = "";
