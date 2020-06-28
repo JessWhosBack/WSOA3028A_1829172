@@ -202,16 +202,6 @@ function testJSON() {
                 }
             }
             break;
-        case "FACE_DETECTION":
-            let landmark = myJSON.responses[0].landmarkAnnotations;
-            for (let key in landmark) {
-                console.log(landmark[key].description);
-                let value = landmark[key];
-                for (let i = 0; i <= value.length; i++) {
-                    console.log(value);
-                }
-            }
-            break;
     }
 
 }
