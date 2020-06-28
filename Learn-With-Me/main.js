@@ -97,12 +97,13 @@ function displayJSON(data) {
 
             for (let key in landmark) {
                 console.log(landmark[key].description);
-                let value = landmark[key];
-                for (let i = 0; i <= value.length; i++) {
-                    result += value;
-                    console.log(value);
-                    count++;
-                }
+                result += landmark[key].description;
+                count++;
+
+                //let value = landmark[key];
+                //for (let i = 0; i <= value.length; i++) {
+                //    console.log(value);
+                //}
             }
             if (count == 0) {
                 $('#formattedResults').text("There are no results :(");
