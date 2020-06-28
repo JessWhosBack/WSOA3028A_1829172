@@ -99,7 +99,7 @@ function displayJSON(data) {
             count = 0;
             resultHTML = "";
             for (let key in landmark) {
-                resultHTML += landmark[key].description + " (certainty of " + landmark[key].score * 100 + "%)<br>";
+                resultHTML += landmark[key].description + " (certainty of " + (landmark[key].score * 100).toFixed(2) + "%)<br>";
                 count++;
             }
             break;
@@ -121,7 +121,7 @@ function displayJSON(data) {
         case "LOGO_DETECTION":
             let logo = data.responses[0].logoAnnotations;
             for (let key in logo) {
-                resultHTML += "There is a certainty of " + logo[key].score * 100 + "% that this is the logo of " + logo[key].description + "<br>";
+                resultHTML += "There is a certainty of " + (logo[key].score * 100).toFixed(2) + "% that this is the logo of " + logo[key].description + "<br>";
                 count++;
             }
             break;
@@ -129,7 +129,7 @@ function displayJSON(data) {
         case "LABEL_DETECTION":
             let label = data.responses[0].labelAnnotations;
             for (let key in label) {
-                resultHTML += label[key].description + "(" + label[key].score * 100 + "% certainty)<br>";
+                resultHTML += label[key].description + "(" + (label[key].score * 100).toFixed(2) + "% certainty)<br>";
                 count++;
             }
             break;
