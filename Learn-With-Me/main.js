@@ -94,10 +94,12 @@ function displayJSON(data) {
             let landmark = data.responses[0].landmarkAnnotations;
             let count = 0;
             let result = "";
-
+            let resultHTML = "";
             for (let key in landmark) {
                 console.log(landmark[key].description);
                 result += landmark[key].description;
+                resultHTML += "<br>" + landmark[key].description;
+
                 count++;
 
                 //let value = landmark[key];
@@ -106,10 +108,12 @@ function displayJSON(data) {
                 //}
             }
             if (count == 0) {
-                $('#formattedResults').text("There are no results :(");
+                $('#formattedResultsText').text("There are no results :(");
             } else {
-                $('#formattedResults').text(result);
-                $('#formattedResultHeading').text = "Results:";
+                $('#formattedResultsText').text(result);
+                $('#formattedResults').innerHTML(resultHTML);
+
+                $('#formattedResultHeading').text("Results:");
             }
             break;
     }
