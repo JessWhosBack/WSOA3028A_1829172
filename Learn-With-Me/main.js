@@ -125,11 +125,10 @@ function displayJSON(data) {
         document.getElementsByClassName("formattedResults")[0].innerHTML = resultHTML;
         $('#results').text("");
     }
-}
 
-$('#resultsHeading_JSON').text("The original JSON result:");
-var contents = JSON.stringify(data, null, 4);
-$('#results_JSON').text(contents);
+    $('#resultsHeading_JSON').text("The original JSON result:");
+    var contents = JSON.stringify(data, null, 4);
+    $('#results_JSON').text(contents);
 }
 
 var myJSON =
