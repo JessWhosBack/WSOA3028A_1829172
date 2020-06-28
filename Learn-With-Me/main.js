@@ -89,39 +89,47 @@ function displayJSON(data) {
 function displayJSON(data) {
 
     var type = $('#fileform [name=type]').val();
+    let count = 0;
+    let resultHTML = "";
+
     switch (type) {
+        //LANDMARK CODE ------------------------------------------------------------
         case "LANDMARK_DETECTION":
             let landmark = data.responses[0].landmarkAnnotations;
-            let count = 0;
-            let result = "";
-            let resultHTML = "";
+            count = 0;
+            resultHTML = "";
             for (let key in landmark) {
-                console.log(landmark[key].description);
-                result += landmark[key].description;
-                resultHTML += "<br>" + landmark[key].description;
-
+                resultHTML += landmark[key].description + "<br>";
                 count++;
-
-                //let value = landmark[key];
-                //for (let i = 0; i <= value.length; i++) {
-                //    console.log(value);
-                //}
             }
-            if (count == 0) {
-                $('#formattedResultsText').text("There are no results :(");
-                $('#results').text("");
-            } else {
-                $('#formattedResultsText').text(result);
-                $('#formattedResultHeading').text("Possible Results:");
-                document.getElementsByClassName("formattedResults")[0].innerHTML = resultHTML;
-                $('#results').text("");
+            break;
+
+        //FACE CODE ------------------------------------------------------------
+        case "FACE_DETECTION":
+            let face = data.responses[0].faceAnnotations;
+            for (let key in face) {
+                resultHTML += "Possibility of joy: " + face[key].joyLikelihood + "<br>";
+                resultHTML += "Possibility of sorrow: " + face[key].sorrowLikelihood + "<br>";
+                resultHTML += "Possibility of anger: " + face[key].angerLikelihood + "<br>";
+                resultHTML += "Possibility of surprise: " + face[key].surpriseLikelihood + "<br>";
+                resultHTML += "Possibility of headwear: " + face[key].headwearLikelihood + "<br>";
+                count++;
             }
             break;
     }
+    if (count == 0) {
+        document.getElementsByClassName("formattedResults")[0].innerHTML = "There are no results :(";
+        $('#results').text("");
+    } else {
+        $('#formattedResultHeading').text("Possible Results:");
+        document.getElementsByClassName("formattedResults")[0].innerHTML = resultHTML;
+        $('#results').text("");
+    }
+}
 
-    $('#resultsHeading_JSON').text("The original JSON result:");
-    var contents = JSON.stringify(data, null, 4);
-    $('#results_JSON').text(contents);
+$('#resultsHeading_JSON').text("The original JSON result:");
+var contents = JSON.stringify(data, null, 4);
+$('#results_JSON').text(contents);
 }
 
 var myJSON =
