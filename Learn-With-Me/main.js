@@ -72,13 +72,19 @@ function sendFileToCloudVision(content) {
 
 /**
  * Displays the results.
- */
+ *
+/* ORIGINAL FUNCTION:
 function displayJSON(data) {
     var contents = JSON.stringify(data, null, 4);
     $('#results').text(contents);
     var evt = new Event('results-displayed');
     evt.results = contents;
     document.dispatchEvent(evt);
+*/
+
+//My adapted display function
+function displayJSON(data) {
+    $('#results').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
 
     console.log("1: " + data.responses[0].landmarkAnnotations[0].mid);
     console.log("2: " + data.responses[0].landmarkAnnotations[1].mid);
