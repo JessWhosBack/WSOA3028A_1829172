@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Learn With Me</title>
     <link rel="stylesheet" href="../stylesheet_Structure.css" />
+    <link rel="stylesheet" href="stylesheet_LearnWithMe.css" />
     <link rel="stylesheet" href="../stylesheet.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,7 @@
             </h1>
         </section>
 
-        <center>
+        <section class="formSection">
             <form id="fileform" action="">
                 <p>What are you looking for in your image?</p>
                 <select name="type">
@@ -54,15 +55,15 @@
                     <option value="IMAGE_PROPERTIES">Image Properties</option>
                     <option value="TYPE_UNSPECIFIED">Unspecified</option>
                 </select><br />
-                <p>Choose a file from your computer</p>
-                <input type="file" name="fileField">
-                <br><br>
-                <input type="submit" name="submit" value="Submit">
+                <p>Choose a file from your computer:</p>
+                <input type="file" name="fileField" class="fileInput">
+                <br><br><br>
+                <input type="submit" name="submit" value="Submit" class="submitButton">
             </form>
-        </center>
+        </section>
         <img>
         <p id="imageTitle"></p>
-        <img id="image">
+        <img id="image" class="image">
 
         <p id="formattedResults"></p>
 

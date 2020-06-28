@@ -33,5 +33,6 @@
 .EmailForm input[type=submit]{
     width:150pt;
     display: block;
+    cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

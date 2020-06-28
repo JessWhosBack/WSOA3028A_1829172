@@ -119,6 +119,7 @@ blockquote{
 }
 
 .AboutMePageButton{
+    cursor: pointer;
     width: 100px;
     height: 50px;
     font-family:  "Cambria";
@@ -216,9 +217,6 @@ blockquote{
 .latestBlogContainer iframe{
     height: 500px;
 }
-
-
-
 
 .ButtonTest{
     width: 30%;

@@ -1,0 +1,64 @@
+.formSection{
+    text-align: center;
+}
+
+select[name="type"]{
+    font-size: calc(16px + 0.5vw);
+    margin-bottom: 3%;
+}
+
+input[name="fileField"]{
+    font-size: calc(16px + 0.5vw);
+}
+
+input[name="submit"]{
+    font-size: calc(16px + 0.5vw);
+}
+
+.image{
+    padding-top: 0;
+    max-width: 50%;
+    min-width: 300px;
+}
+
+select[name="type"]{
+    cursor: pointer;
+}
+
+.submitButton{
+    cursor: pointer;
+    padding: 1rem 2rem 1rem 2rem;
+    font-weight: bold;
+    color: black;
+    font-size: 2vw;
+    background: #b4d2e7;    
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 10px 10px 10px 10px;
+}
+.submitButton:hover{
+    color: white;
+    background: #94c5cc;
+}
+
+.fileInput,.fileInput:hover, .fileInput:active, .fileInput:visited {
+    color:#0000cc;
+    cursor: pointer;
+    border-style: none;
+}
+
+.fileInput::-webkit-file-upload-button {
+    cursor: pointer; 
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+    color: black;
+    background: #b4d2e7;    
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.fileInput::-webkit-file-upload-button:hover {
+    color: white;
+    background: #94c5cc;
+}

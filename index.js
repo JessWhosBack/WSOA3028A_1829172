@@ -1,23 +1,3 @@
-let myBlogButton = document.getElementsByClassName("ButtonTest")[0];
-if (myBlogButton != null) {
-    myBlogButton.style.cursor = "pointer";
-    myBlogButton.addEventListener("click", function () { location.href = "blogs/"; });
-}
-
-let myBlogPageButtons = document.getElementsByClassName("blogPageButton")
-if (myBlogPageButtons != null) {
-    for (let i = 0; i < myBlogPageButtons.length; i++) {
-        myBlogPageButtons[i].style.cursor = "pointer";
-    }
-}
-
-let myAboutPageButtons = document.getElementsByClassName("AboutMePageButton")
-if (myAboutPageButtons != null) {
-    for (let i = 0; i < myAboutPageButtons.length; i++) {
-        myAboutPageButtons[i].style.cursor = "pointer";
-    }
-}
-
 let myHeader = document.querySelector("header");
 if (myHeader != null) {
     if (window.location !== window.parent.location) {
@@ -76,26 +56,31 @@ function smallWidth(winWidth) {
             }
         }
     } else {
-        let footerTextArray = footer.querySelector("nav").querySelectorAll("a");
-        for (let i = 0; i < footerTextArray.length; i++) {
-            let stringText = footer.querySelector("nav").querySelectorAll("a")[i].innerHTML;
-            switch (stringText) {
-                case "Home":
-                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Home Page";
-                    break;
-                case "About":
-                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "About Me";
-                    break;
-                case "Contact":
-                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Contact Me";
-                    break;
-                case "Blogs":
-                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "My Blogs";
-                    break;
-                case "Learn":
-                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Learn With Me";
-                    break;
+        try {
+            let footerTextArray = footer.querySelector("nav").querySelectorAll("a");
+            for (let i = 0; i < footerTextArray.length; i++) {
+                let stringText = footer.querySelector("nav").querySelectorAll("a")[i].innerHTML;
+                switch (stringText) {
+                    case "Home":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Home Page";
+                        break;
+                    case "About":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "About Me";
+                        break;
+                    case "Contact":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Contact Me";
+                        break;
+                    case "Blogs":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "My Blogs";
+                        break;
+                    case "Learn":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Learn With Me";
+                        break;
+                }
             }
+        }
+        catch{
+            console.log("Error getting footer information, please reload page");
         }
     }
 }

@@ -176,3 +176,5 @@ function testJSON() {
     console.log("5: " + myJSON.responses[0].landmarkAnnotations[0].locations[0].latLng.latitude);
 
 }
+
+
