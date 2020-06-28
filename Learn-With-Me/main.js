@@ -121,7 +121,7 @@ function displayJSON(data) {
         case "LOGO_DETECTION":
             let logo = data.responses[0].logoAnnotations;
             for (let key in logo) {
-                resultHTML += "There is a certainty of " + (logo[key].score * 100).toFixed(2) + "% that this is the logo of " + logo[key].description + "<br>";
+                resultHTML += logo[key].description + " (" + (logo[key].score * 100).toFixed(2) + "% certainty)<br>";
                 count++;
             }
             break;
@@ -129,8 +129,20 @@ function displayJSON(data) {
         case "LABEL_DETECTION":
             let label = data.responses[0].labelAnnotations;
             for (let key in label) {
-                resultHTML += label[key].description + "(" + (label[key].score * 100).toFixed(2) + "% certainty)<br>";
+                resultHTML += label[key].description + " (" + (label[key].score * 100).toFixed(2) + "% certainty)<br>";
                 count++;
+            }
+            break;
+        //TEXT CODE ------------------------------------------------------------
+        case "TEXT_DETECTION":
+            let text = data.responses[0].textAnnotations;
+            for (let key in text) {
+                resultHTML += "Detected text: " + text[key].description + "<br>";
+                count++;
+            }
+            let textLang = data.responses[0].fullTextAnnotation.pages[0].property.detectedLanguages[0];
+            for (let key in textLang) {
+                resultHTML += "Detected language: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
             }
             break;
     }
