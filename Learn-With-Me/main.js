@@ -108,7 +108,7 @@ function displayJSON(data) {
         case "FACE_DETECTION":
             let face = data.responses[0].faceAnnotations;
             for (let key in face) {
-                resultHTML += "Possibility of joy: " + face[key].joyLikelihood + "<br>";
+                resultHTML += "Possibility of joy: " + determineLikliness(face[key].joyLikelihood) + "<br>";
                 resultHTML += "Possibility of sorrow: " + face[key].sorrowLikelihood + "<br>";
                 resultHTML += "Possibility of anger: " + face[key].angerLikelihood + "<br>";
                 resultHTML += "Possibility of surprise: " + face[key].surpriseLikelihood + "<br>";
@@ -138,4 +138,29 @@ function resetResults() {
     $('#results_JSON').text("");
     $('#formattedResultHeading').text("");
     $('#resultsHeading_JSON').text("");
+}
+
+function determineLikliness(v) {
+    var like = "";
+    switch (v) {
+        case "LIKELIHOOD_UNSPECIFIED":
+            like = "unspecified";
+            break;
+        case "VERY_UNLIKELY":
+            like = "very unlikely";
+            break;
+        case "UNLIKELY":
+            like = "unlikely";
+            break;
+        case "POSSIBLE":
+            like = "possible";
+            break;
+        case "LIKELY":
+            like = "likely";
+            break;
+        case "VERY_LIKELY":
+            like = "very likely";
+            break;
+    }
+    return like;
 }
