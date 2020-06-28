@@ -31,7 +31,7 @@ function uploadFiles(event) {
     var reader = new FileReader();
     reader.onloadend = processFile;
     reader.readAsDataURL(file);
-    document.getElementById("imageTitle").innerHTML = "Your image:";
+    document.getElementById("imageTitle").innerHTML = "<h2>Your image:</h2>";
     document.getElementById("image").src = URL.createObjectURL(file);
 }
 
@@ -109,12 +109,12 @@ function displayJSON(data) {
             }
             if (count == 0) {
                 $('#formattedResultsText').text("There are no results :(");
+                $('#results').text("");
             } else {
                 $('#formattedResultsText').text(result);
-                document.getElementsByClassName("formattedResults")[0].innerHTML = resultHTML;
-
-
                 $('#formattedResultHeading').text("Possible Results:");
+                document.getElementsByClassName("formattedResults")[0].innerHTML = resultHTML;
+                $('#results').text("");
             }
             break;
     }
