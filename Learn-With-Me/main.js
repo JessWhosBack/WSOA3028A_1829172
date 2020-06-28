@@ -121,7 +121,15 @@ function displayJSON(data) {
         case "LOGO_DETECTION":
             let logo = data.responses[0].logoAnnotations;
             for (let key in logo) {
-                resultHTML += "There is a certainty of " + logo[key].score + " that this is the logo of " + logo[key].description + "<br>";
+                resultHTML += "There is a certainty of " + logo[key].score * 100 + "% that this is the logo of " + logo[key].description + "<br>";
+                count++;
+            }
+            break;
+        //LABEL CODE ------------------------------------------------------------
+        case "LABEL_DETECTION":
+            let label = data.responses[0].labelAnnotations;
+            for (let key in label) {
+                resultHTML += label[key].description + "(" + label[key].score * 100 + "% certainty)<br>";
                 count++;
             }
             break;
