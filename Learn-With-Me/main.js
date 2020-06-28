@@ -99,7 +99,7 @@ function displayJSON(data) {
             count = 0;
             resultHTML = "";
             for (let key in landmark) {
-                resultHTML += landmark[key].description + "<br>";
+                resultHTML += landmark[key].description + " (certainty of " + landmark[key].score * 100 + "%)<br>";
                 count++;
             }
             break;
