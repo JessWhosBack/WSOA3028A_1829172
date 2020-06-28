@@ -148,17 +148,16 @@ function displayJSON(data) {
         //SAFE SEARCH CODE ------------------------------------------------------------
         case "SAFE_SEARCH_DETECTION":
             let safe = data.responses[0].safeSearchAnnotation;
-            for (let key in safe) {
-                resultHTML += "Possibility of adult content: " + determineLikliness(safe[key].adult) + "<br>";
-                resultHTML += "Possibility of spoof content: " + determineLikliness(safe[key].spoof) + "<br>";
-                resultHTML += "Possibility of medical content: " + determineLikliness(safe[key].medical) + "<br>";
-                resultHTML += "Possibility of violent content: " + determineLikliness(safe[key].violence) + "<br>";
-                resultHTML += "Possibility of racy content: " + determineLikliness(safe[key].racy) + "<br>";
-                count++;
-            }
+            resultHTML += "Possibility of adult content: " + determineLikliness(safe.adult) + "<br>";
+            resultHTML += "Possibility of spoof content: " + determineLikliness(safe.spoof) + "<br>";
+            resultHTML += "Possibility of medical content: " + determineLikliness(safe.medical) + "<br>";
+            resultHTML += "Possibility of violent content: " + determineLikliness(safe.violence) + "<br>";
+            resultHTML += "Possibility of racy content: " + determineLikliness(safe.racy) + "<br>";
+            count++;
             break;
         case "IMAGE_PROPERTIES":
             resultHTML += "See the original JSON results below"
+            count = 1;
             break;
     }
     if (count == 0) {
