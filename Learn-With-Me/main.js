@@ -109,10 +109,19 @@ function displayJSON(data) {
             let face = data.responses[0].faceAnnotations;
             for (let key in face) {
                 resultHTML += "Possibility of joy: " + determineLikliness(face[key].joyLikelihood) + "<br>";
-                resultHTML += "Possibility of sorrow: " + face[key].sorrowLikelihood + "<br>";
-                resultHTML += "Possibility of anger: " + face[key].angerLikelihood + "<br>";
-                resultHTML += "Possibility of surprise: " + face[key].surpriseLikelihood + "<br>";
-                resultHTML += "Possibility of headwear: " + face[key].headwearLikelihood + "<br>";
+                resultHTML += "Possibility of sorrow: " + determineLikliness(face[key].sorrowLikelihood) + "<br>";
+                resultHTML += "Possibility of anger: " + determineLikliness(face[key].angerLikelihood) + "<br>";
+                resultHTML += "Possibility of surprise: " + determineLikliness(face[key].surpriseLikelihood) + "<br>";
+                resultHTML += "Possibility of headwear: " + determineLikliness(face[key].headwearLikelihood) + "<br>";
+                count++;
+            }
+            break;
+
+        //LOGO CODE ------------------------------------------------------------
+        case "LOGO_DETECTION":
+            let logo = data.responses[0].logoAnnotations;
+            for (let key in logo) {
+                resultHTML += "There is a certainty of " + logo[key].score + " that this is the logo of " + logo[key].description + "<br>";
                 count++;
             }
             break;
