@@ -60,7 +60,6 @@ function sendFileToCloudVision(content) {
             }]
         }]
     };
-
     $('#results').text('Loading...');
     $.post({
         url: CV_URL,
@@ -80,4 +79,7 @@ function displayJSON(data) {
     var evt = new Event('results-displayed');
     evt.results = contents;
     document.dispatchEvent(evt);
+    var myJson = JSON.parse(data);
+    $('#yesboi').text(myJson.description);
+
 }
