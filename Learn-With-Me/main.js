@@ -140,7 +140,7 @@ function displayJSON(data) {
                 resultHTML += "Detected text: " + text[key].description + "<br>";
                 count++;
             }
-            let textLang = data.responses[0].fullTextAnnotation.pages.property[0].detectedLanguages;
+            let textLang = data.responses[0].fullTextAnnotation.pages[0].property.detectedLanguages;
             for (let key in textLang) {
                 resultHTML += "Detected language: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
             }
