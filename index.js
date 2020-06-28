@@ -69,6 +69,9 @@ function smallWidth(winWidth) {
                     case "My Blogs":
                         footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Blogs";
                         break;
+                    case "Learn With Me":
+                        footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Learn";
+                        break;
                 }
             }
         }
@@ -88,6 +91,9 @@ function smallWidth(winWidth) {
                     break;
                 case "Blogs":
                     footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "My Blogs";
+                    break;
+                case "Learn":
+                    footer.querySelector("nav").querySelectorAll("a")[i].innerHTML = "Learn With Me";
                     break;
             }
         }
