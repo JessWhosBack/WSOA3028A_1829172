@@ -119,9 +119,8 @@ function displayJSON(data) {
             break;
     }
 
-    //$('#formattedResults').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
-    //var contents = JSON.stringify(data, null, 4);
-    //$('#results').text(contents);
+    var contents = JSON.stringify(data, null, 4);
+    $('#results_JSON').text(contents);
 }
 
 var myJSON =
