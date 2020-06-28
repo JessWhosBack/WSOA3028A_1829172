@@ -142,8 +142,23 @@ function displayJSON(data) {
             }
             let textLang = data.responses[0].fullTextAnnotation.pages[0].property.detectedLanguages;
             for (let key in textLang) {
-                resultHTML += "Detected language: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
+                resultHTML += "Detected language code: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
             }
+            break;
+        //SAFE SEARCH CODE ------------------------------------------------------------
+        case "SAFE_SEARCH_DETECTION":
+            let safe = data.responses[0].safeSearchAnnotation;
+            for (let key in safe) {
+                resultHTML += "Possibility of adult content: " + determineLikliness(safe[key].adult) + "<br>";
+                resultHTML += "Possibility of spoof content: " + determineLikliness(safe[key].spoof) + "<br>";
+                resultHTML += "Possibility of medical content: " + determineLikliness(safe[key].medical) + "<br>";
+                resultHTML += "Possibility of violent content: " + determineLikliness(safe[key].violence) + "<br>";
+                resultHTML += "Possibility of racy content: " + determineLikliness(safe[key].racy) + "<br>";
+                count++;
+            }
+            break;
+        case "IMAGE_PROPERTIES":
+            resultHTML += "See the original JSON results below"
             break;
     }
     if (count == 0) {
