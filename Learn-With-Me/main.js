@@ -93,26 +93,24 @@ function displayJSON(data) {
         case "LANDMARK_DETECTION":
             let landmark = data.responses[0].landmarkAnnotations;
             let count = 0;
-            $('#formattedResults').innerHTML = "<h2>Results:</h2><br>";
+            $('#formattedResults').text = "<h2>Results:</h2><br>";
 
             for (let key in landmark) {
                 console.log(landmark[key].description);
                 let value = landmark[key];
                 for (let i = 0; i <= value.length; i++) {
-                    $('#formattedResults').innerHTML += toString(value);
+                    $('#formattedResults').text += value;
                     console.log(value);
                     count++;
                 }
             }
             if (count == 0) {
-                $('#formattedResults').innerHTML = "There are no results :(";
+                $('#formattedResults').text = "There are no results :(";
             }
             break;
     }
 
     //$('#formattedResults').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
-
-
     //var contents = JSON.stringify(data, null, 4);
     //$('#results').text(contents);
 }
