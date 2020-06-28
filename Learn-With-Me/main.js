@@ -111,10 +111,10 @@ function displayJSON(data) {
                 $('#formattedResultsText').text("There are no results :(");
             } else {
                 $('#formattedResultsText').text(result);
-                document.querySelector("p").querySelector("formattedResults").innerHTML = resultHTML;
+                document.querySelector("p").getElementsByClassName("formattedResults")[0].innerHTML = resultHTML;
 
 
-                $('#formattedResultHeading').text("Results:");
+                $('#formattedResultHeading').text("Possible Results:");
             }
             break;
     }
