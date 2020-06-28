@@ -31,8 +31,18 @@
     min-width: 200px;
 }
 .EmailForm input[type=submit]{
-    width:150pt;
     display: block;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem 2rem 1rem 2rem;
+    font-weight: bold;
+    color: black;
+    background: #b4d2e7;    
+    border-style: outset;
+    border-width: 3px;
+    border-radius: 10px 10px 10px 10px;
+}
+.EmailForm input[type=submit]:hover{
+    color: white;
+    background: #94c5cc;
 }

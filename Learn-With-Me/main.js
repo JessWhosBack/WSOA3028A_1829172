@@ -84,97 +84,11 @@ function displayJSON(data) {
     document.dispatchEvent(evt);
 */
 
+
 //My adapted display function
 function displayJSON(data) {
-    $('#results').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
+    $('#formattedResults').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
 
     var contents = JSON.stringify(data, null, 4);
     $('#results').text(contents);
 }
-
-var myJSON =
-{
-    "responses": [
-        {
-            "landmarkAnnotations": [
-                {
-                    "mid": "/m/02j81",
-                    "description": "Eiffel Tower",
-                    "score": 0.6345246,
-                    "boundingPoly": {
-                        "vertices": [
-                            {
-                                "x": 205,
-                                "y": 150
-                            },
-                            {
-                                "x": 265,
-                                "y": 150
-                            },
-                            {
-                                "x": 265,
-                                "y": 231
-                            },
-                            {
-                                "x": 205,
-                                "y": 231
-                            }
-                        ]
-                    },
-                    "locations": [
-                        {
-                            "latLng": {
-                                "latitude": 48.858461,
-                                "longitude": 2.294351
-                            }
-                        }
-                    ]
-                },
-                {
-                    "mid": "/g/120xtw6z",
-                    "description": "Trocadéro Gardens",
-                    "score": 0.47110596,
-                    "boundingPoly": {
-                        "vertices": [
-                            {
-                                "x": 197,
-                                "y": 155
-                            },
-                            {
-                                "x": 300,
-                                "y": 155
-                            },
-                            {
-                                "x": 300,
-                                "y": 230
-                            },
-                            {
-                                "x": 197,
-                                "y": 230
-                            }
-                        ]
-                    },
-                    "locations": [
-                        {
-                            "latLng": {
-                                "latitude": 48.861596299999995,
-                                "longitude": 2.2892823
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-
-function testJSON() {
-    console.log("1: " + myJSON.responses[0].landmarkAnnotations[0].mid);
-    console.log("2: " + myJSON.responses[0].landmarkAnnotations[1].mid);
-    console.log("3: " + myJSON.responses[0].landmarkAnnotations[0].description);
-    console.log("4: " + myJSON.responses[0].landmarkAnnotations[1].description);
-    console.log("5: " + myJSON.responses[0].landmarkAnnotations[0].locations[0].latLng.latitude);
-
-}
-
-
