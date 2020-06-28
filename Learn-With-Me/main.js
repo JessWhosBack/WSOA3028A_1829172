@@ -119,6 +119,7 @@ function displayJSON(data) {
             break;
     }
 
+    $('#resultsHeading_JSON').text("The original JSON result:");
     var contents = JSON.stringify(data, null, 4);
     $('#results_JSON').text(contents);
 }
