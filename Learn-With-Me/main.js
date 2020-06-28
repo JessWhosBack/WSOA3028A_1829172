@@ -140,10 +140,10 @@ function displayJSON(data) {
                 resultHTML += "Detected text: " + text[key].description + "<br>";
                 count++;
             }
-            //let textLang = data.responses[0].fullTextAnnotation[0].pages.property[0].detectedLanguages;
-            //for (let key in textLang) {
-            //    resultHTML += "Detected language: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
-            // }
+            let textLang = data.responses[0].fullTextAnnotation.pages.property.detectedLanguages;
+            for (let key in textLang) {
+                resultHTML += "Detected language: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
+            }
             break;
     }
     if (count == 0) {
