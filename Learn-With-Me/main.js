@@ -111,7 +111,7 @@ function displayJSON(data) {
                 $('#formattedResultsText').text("There are no results :(");
             } else {
                 $('#formattedResultsText').text(result);
-                p.querySelector("formattedResults")[0].innerHTML = resultHTML;
+                document.querySelector("p").querySelector("formattedResults").innerHTML = resultHTML;
 
 
                 $('#formattedResultHeading').text("Results:");
