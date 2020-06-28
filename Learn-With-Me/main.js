@@ -31,6 +31,8 @@ function uploadFiles(event) {
     var reader = new FileReader();
     reader.onloadend = processFile;
     reader.readAsDataURL(file);
+    document.getElementById("imageTitle").innerHTML = "Your image:";
+    document.getElementById("image").src = URL.createObjectURL(file);
 }
 
 /**
@@ -86,11 +88,8 @@ function displayJSON(data) {
 function displayJSON(data) {
     $('#results').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
 
-    console.log("1: " + data.responses[0].landmarkAnnotations[0].mid);
-    console.log("2: " + data.responses[0].landmarkAnnotations[1].mid);
-    console.log("3: " + data.responses[0].landmarkAnnotations[0].description);
-    console.log("4: " + data.responses[0].landmarkAnnotations[1].description);
-    console.log("5: " + data.responses[0].landmarkAnnotations[0].locations[0].latLng.latitude);
+    var contents = JSON.stringify(data, null, 4);
+    $('#results').text(contents);
 }
 
 var myJSON =

@@ -37,34 +37,36 @@
     <article>
         <section>
             <h1>
-                A Brief History of <b><i>Me</i></b>
+                Analysing Images with Google Cloud's Vision API
             </h1>
         </section>
 
-        <form id="fileform" action="">
-            <select name="type">
-                <option value="LANDMARK_DETECTION">Landmark</option>
-                <option value="FACE_DETECTION">Face</option>
-                <option value="LOGO_DETECTION">Logo</option>
-                <option value="LABEL_DETECTION">Label</option>
-                <option value="TEXT_DETECTION">Text</option>
-                <option value="SAFE_SEARCH_DETECTION">Safe Search</option>
-                <option value="IMAGE_PROPERTIES">Image Properties</option>
-                <option value="TYPE_UNSPECIFIED">Unspecified</option>
-            </select><br />
-            <input type="file" name="fileField"><br /><br />
-            <input type="submit" name="submit" value="Submit">
-        </form>
+        <center>
+            <form id="fileform" action="">
+                <p>What are you looking for in your image?</p>
+                <select name="type">
+                    <option value="LANDMARK_DETECTION">Landmark</option>
+                    <option value="FACE_DETECTION">Face</option>
+                    <option value="LOGO_DETECTION">Logo</option>
+                    <option value="LABEL_DETECTION">Label</option>
+                    <option value="TEXT_DETECTION">Text</option>
+                    <option value="SAFE_SEARCH_DETECTION">Safe Search</option>
+                    <option value="IMAGE_PROPERTIES">Image Properties</option>
+                    <option value="TYPE_UNSPECIFIED">Unspecified</option>
+                </select><br />
+                <p>Choose a file from your computer</p>
+                <input type="file" name="fileField">
+                <br><br>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </center>
         <img>
+        <p id="imageTitle"></p>
+        <img id="image">
 
+        <p id="formattedResults"></p>
 
         <code style="white-space:pre" id="results"></code>
-
-        <p id="yesboi">
-
-        </p>
-
-
 
     </article>
     <footer>
