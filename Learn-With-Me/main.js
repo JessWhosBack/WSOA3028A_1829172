@@ -69,7 +69,6 @@ function sendFileToCloudVision(content) {
         contentType: 'application/json'
     }).fail(function (jqXHR, textStatus, errorThrown) {
         $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
-        testJSON();
     }).done(displayJSON);
 }
 
@@ -93,13 +92,20 @@ function displayJSON(data) {
     switch (type) {
         case "LANDMARK_DETECTION":
             let landmark = data.responses[0].landmarkAnnotations;
+            let count = 0;
+            $('#formattedResults').innerHTML = "<h2>Results:</h2><br>";
+
             for (let key in landmark) {
                 console.log(landmark[key].description);
                 let value = landmark[key];
                 for (let i = 0; i <= value.length; i++) {
-                    $('#formattedResults').innerHTML += value;
+                    $('#formattedResults').innerHTML += toString(value);
                     console.log(value);
+                    count++;
                 }
+            }
+            if (count == 0) {
+                $('#formattedResults').innerHTML = "There are no results :(";
             }
             break;
     }
@@ -107,8 +113,8 @@ function displayJSON(data) {
     //$('#formattedResults').text("This is the " + data.responses[0].landmarkAnnotations[0].description + " which is located in " + data.responses[0].landmarkAnnotations[1].description);
 
 
-    var contents = JSON.stringify(data, null, 4);
-    $('#results').text(contents);
+    //var contents = JSON.stringify(data, null, 4);
+    //$('#results').text(contents);
 }
 
 var myJSON =
