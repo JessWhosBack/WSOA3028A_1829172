@@ -45,6 +45,120 @@
     </section>
     <article>
         <h1>Using Google Cloud's Vision API</h1>
+        <p>
+            I must start with; I can't believe I got this to work...
+        </p>
+        <h2>Preamble</h2>
+        <p>
+            For this, the final exam submission, it is required that this website makes use of ONE external
+            dependency or framework in order to explore the concept of augmenting, reflecting or challenging the
+            physical world with the digital; specifically in context of the representation of Johannesburg. Since I
+            suspected that implementing an interesting and useful dependency would take time and effort (I was correct),
+            I also wanted to use a dependency that Eddie (my character) would actually be interested and
+            inspired by as well. In other words, I really wanted this dependency to be something that Eddie would
+            actually want in his life. Another important note is that Eddie's entire life is situated in Johannesburg.
+        </p>
+        <p>
+            My first thought process was:
+        <blockquote>
+            When Eddie travels around Johannesburg...
+            <br><b>How does he view his city?</b>
+            <br>What does he see?
+            <br>Does he want to know more?
+        </blockquote>
+        </p>
+        <p>
+            Eddie has been established as a person with a keen urge to learn. His second love is teaching and he has
+            incorporated studying into most of his life. He holds a diploma in Mechanical Engineering and has studied
+            further in other areas such as Theology and Social Studies. Over and above this, he lectured and taught
+            mechanical drawing for years and years.
+        </p>
+        <p>
+            With this in mind, my next thought, after watching the weekly lecture about APIs, was:
+        <blockquote>
+            Since Eddie LOVES learning...
+            <br>What if he could learn more about his city no matter where he is?
+        </blockquote>
+        What if I could implement some dependency that allows the user to simply upload an image to this website, and it
+        tells them more about the said image? Specifically where the image is of. After lots of research, I found the
+        perfect dependency: Google's Cloud Vision API.
+        </p>
+        <h2>About the Vision API</h2>
+        <p>
+            According to Google's <a href="https://cloud.google.com/vision/docs" target="_blank">documentation</a>,
+            the Cloud Vision API allows developers to easily integrate vision detection features within
+            applications, including image labeling, face and landmark detection, optical character recognition
+            (OCR), and tagging of explicit content.
+        </p>
+        <p>
+            In other words, this API does EXACTLY what I need it to do! This was very exciting!
+        </p>
+        <h3>Requirements: Google Cloud Account</h3>
+        <p>
+            In order to use the API, Google requires that I have a Google Cloud account, with billing enabled and I was
+            initially concerned about this as did not want to spend any money. Fortunately my concerns were unwarranted
+            as a Google Cloud account has a few convenient features:
+        <ul>
+            <li>
+                There is a free trial period in which the new account gets $300 to spend within a year.
+            </li>
+            <li>
+                A credit card is required to start an account, but this will not be billed, even after the free trial
+                period has ended.
+                <ul>
+                    <li>This is to prove your identity and authenticity to Google.</li>
+                    <li>Projects are required to have billing setup before you can use many of the APIs.</li>
+                </ul>
+            </li>
+            <li>
+                Every month, the Vision API allows the first 1000 units analysed PER feature free.
+                <ul>
+                    <li>
+                        See Google's <a href="https://cloud.google.com/vision/pricing" target="_blank">pricing page</a>
+                        for more details.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        I thus was able to setup a Google Cloud account with sufficient access to use the Vision API without a hitch.
+        Little did I know, this would be the least of my problems faced.
+        </p>
+        <h3>Requirements: API Key</h3>
+        <p>
+            To use the API from my website, I had to create an API key that authenticates calls made to the Vision API.
+            It took me SO long to figure out how this worked. I had spent so much time researching and learning about
+            keys and attempting various solutions to no avail. I was honestly was about to give up, when I came accross
+            the perfect example of how to do this in Google Cloud's own community
+            <a href="https://github.com/GoogleCloudPlatform" target="_blank">Github repository</a>.
+            Specifically the <a
+                href="https://github.com/GoogleCloudPlatform/web-docs-samples/tree/master/vision/explore-api"
+                target="_blank">GoogleCloudPlatform/web-docs-samples</a> repository.
+        </p>
+        <p>
+            However, I quickly realised that I had just done something very unsecure and rather dangerous: made my newly
+            discovered and created API key public. This means that anyone with this key would be able to make calls to
+            and use the Vision API... Not good!
+        </p>
+        <p>
+            All research I did told me that hiding this key when using <b>only</b> JavaScript, HTML, CSS, etc. was
+            impossible. I was completely stuck. Fortunately, Google Cloud allows users to restrict their API keys to
+            ONLY allow specified pages to call the API. While I am definitely not happy with this "solution", I believe
+            it is the best that I can do for this assignment within the allocated time. As soon as this assignment has
+            been marked I will remove the public API key.
+        </p>
+        <h3>External Dependency or Framework</h3>
+        <p>
+            Why is this dependency necessary?
+            What alternatives are there?
+            Why did I choose this one?
+            Technical impact of it?
+        </p>
+        <h3>Augmenting/Reflecting/Challenging the Physical World with the Digital</h3>
+        <h3>Johannesburg</h3>
+
+        <h2>About the Vision API</h2>
+
+        <h2>Security Concerns: Public API Key</h2>
     </article>
     <footer class="footer">
         <nav>
