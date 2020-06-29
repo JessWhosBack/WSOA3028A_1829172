@@ -171,7 +171,6 @@ function displayJSON(data) {
     $('#resultsHeading_JSON').text("The original JSON result:");
     var contents = JSON.stringify(data, null, 4);
     $('#results_JSON').text(contents);
-    console.log(contents);
 }
 
 function resetResults() {
