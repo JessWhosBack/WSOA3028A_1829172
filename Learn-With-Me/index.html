@@ -38,13 +38,45 @@
     <article>
         <section>
             <h1>
-                Analysing Images with Google Cloud's Vision API
+                Analysing Images: Detecting Landmarks (etc.)
             </h1>
+            <p>
+                I have a tremendous love for all things related to engineering - whether it be mechanical, structural,
+                digital, etc. and so when I first came across Google Cloud's Vision API, I was immediately interested.
+            </p>
+            <p>
+                According to Google's <a href="https://cloud.google.com/vision/docs" target="_blank">documentation</a>,
+                the Cloud Vision API allows developers to easily integrate vision detection features within
+                applications, including image labeling, face and landmark detection, optical character recognition
+                (OCR), and tagging of explicit content.
+            </p>
+            <p>
+                Therefore by registering with the Google Cloud Platform and obtaining the necessary credentials, I was
+                able to integrate this API into my website for all of you to try out!
+            </p>
+            <p>
+                At the start I was only going to implement the "LANDMARK_DETECTION" feature that analyses an uploaded
+                image and returns a result of what location the uploaded photo is from, with a percentage certainty.
+                However, after reading about and testing out the other features - face and emotion, logo, label, optical
+                character
+                recognition and language, safe search, image property detection - I decided they were way too cool to
+                not implement and include as well.
+            </p>
+            <p>
+                I am still mostly interested in the "LANDMARK_DETECTION" feature because I want to test whether the API
+                is able to pick up as many South African (particularly Johannesburg) features and landmarks compared to
+                other more 'famous' countries (and cities). I have a sneaky suspicion that there will be WAY more
+                North American and European landmarks in the API's database compared to those in Africa. What do you
+                think?
+            </p>
+            <p>
+                Please try out the API below! Let me know what you find out!
+            </p>
         </section>
-
         <section class="formSection">
+            <h2>Google Cloud Vision API</h2>
             <form id="fileform" action="">
-                <p>What are you looking for in your image?</p>
+                <h3>What are you looking for in your image?</h3>
                 <select name="type">
                     <option value="LANDMARK_DETECTION">Landmark</option>
                     <option value="FACE_DETECTION">Face</option>
@@ -54,7 +86,7 @@
                     <option value="SAFE_SEARCH_DETECTION">Safe Search</option>
                     <option value="IMAGE_PROPERTIES">Image Properties</option>
                 </select><br />
-                <p>Choose a file from your computer:</p>
+                <h3>Choose a file from your computer:</h3>
                 <input type="file" name="fileField" class="fileInput">
                 <br><br><br>
                 <input type="submit" name="submit" value="Submit" class="submitButton">
