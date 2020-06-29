@@ -133,14 +133,18 @@ function displayJSON(data) {
             break;
         //TEXT CODE -------------------------------------------------------------------------------------
         case "TEXT_DETECTION":
-            let text = data.responses[0].textAnnotations;
-            for (let key in text) {
-                resultHTML += "Detected text: " + text[key].description + "<br>";
-                count++;
-            }
-            let textLang = data.responses[0].fullTextAnnotation.pages[0].property.detectedLanguages;
-            for (let key in textLang) {
-                resultHTML += "Detected language code: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
+            try {
+                let text = data.responses[0].textAnnotations;
+                for (let key in text) {
+                    resultHTML += "Detected text: " + text[key].description + "<br>";
+                    count++;
+                }
+                let textLang = data.responses[0].fullTextAnnotation.pages[0].property.detectedLanguages;
+                for (let key in textLang) {
+                    resultHTML += "Detected language code: " + textLang[key].languageCode + " (" + (textLang[key].confidence * 100).toFixed(2) + "% certainty)<br>";
+                }
+            } catch{
+                count = 0;
             }
             break;
         //SAFE SEARCH CODE ------------------------------------------------------------------------------

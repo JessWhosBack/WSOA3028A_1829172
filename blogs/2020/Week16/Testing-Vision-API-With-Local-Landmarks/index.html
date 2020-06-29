@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Blog: Testing the Landmark Detection Feature with Local Landmarks</title>
+
+    <link rel="stylesheet" href="../../../../stylesheet_Structure.css" />
+    <link rel="stylesheet" href="../../../../stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet_TestingAPI.css" />
+
+    <script type="module" src="../../../../index.js" async></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blog about my tests of the Landmark Detection Feature using local landmarks" />
+    <meta name="author" content="Jesse van der Merwe" />
+    <meta name="keywords"
+        content="blog, learning, local, johannesburg, landmarks, google, google cloud, cloud vision, vision API" />
+
+    <meta property="og:title" content="Blog: Testing the Landmark Detection Feature with Local Landmarks" />
+    <meta property="og:url"
+        content="https://jesswhosback.github.io/WSOA3028A_1829172/blogs/2020/Week16/Testing-Vision-API-With-Local-Landmarks" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="../../../../">EDDIE<span>BLOGS</span></a></div>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../../../../About-Me/">About Me</a></li>
+                <li><a href="../../../../blogs/">My Blogs</a></li>
+                <li><a href="../../../../Learn-With-Me/">Vision API</a></li>
+                <li><a href="../../../../Contact-Me/">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle"><img src="../../../../Images/menu_Mobile.png"></div>
+        </div>
+    </header>
+    <section class="BlogNav" id="BlogNav">
+        <a id="BlogNavPrev" href="../../Week16/Reflection-Vision-API/">
+            - Previous Blog
+        </a>
+    </section>
+    <article>
+        <h1>Testing the Vision API's Landmark Detection with Local Landmarks</h1>
+        <p>
+            I currently live in Johannesburg and I love my city. Even though there is a lot of bad, there is also a LOT
+            of good. I think it is a wonderful place, and it has so many historic and beautiful landmarks.
+        </p>
+        <p>
+            It therefore made me very sad when, no matter what image I used (and trust me, I tried a LOT of images), the
+            Vision API could not detect our beautiful skyline:
+
+        </p>
+        <section class="ImageResults">
+            <img src="../../../../Images/Week16/Test_JHB (1).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (2).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (3).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (4).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (5).PNG">
+            <img src="../../../../Images/Week16/Test_JHB_Sandton.PNG">
+            <img src="../../../../Images/Week16/Test_JHB (6).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (7).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (8).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (9).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (10).PNG">
+            <img src="../../../../Images/Week16/Test_JHB (11).PNG">
+        </section>
+        <p>
+            I know that we can't really compare the online presence of Johannesburg to a city like London, which had
+            instant results, however it still feels as if my city isn't on the digital map...
+        </p>
+        <section class="ImageResults">
+            <img src="../../../../Images/Week16/Test_London.PNG">
+            <img src="../../../../Images/Week16/Test_London2.PNG">
+        </section>
+        <p>
+            Another example of this is the Nelson Mandela bridge - which I know is no where near as famous as some other
+            world-famous bridges - but it's still interesting that there are no results. It made me feel a bit better
+            that our Bloukrans bridge at least got a result.
+
+        </p>
+        <section class="ImageResults">
+            <img src="../../../../Images/Week16/Test_JHB_NelsonMandelaBridge.PNG">
+            <img src="../../../../Images/Week16/Test_JHB_NelsonMandelaBridge2.PNG">
+            <img src="../../../../Images/Week16/Test_BloukransBridge.PNG">
+        </section>
+        <p>
+            Here are two world-famous bridges in comparison:
+        </p>
+        <section class="ImageResults">
+            <img src="../../../../Images/Week16/Test_GreatBeltEastBridgeDenmark.PNG">
+            <img src="../../../../Images/Week16/Test_GoldenGateBridge.PNG">
+        </section>
+        <p>
+            I also know that an unclear picture can change the result of this API, which is why I tried as many images
+            as I could for all landmarks - as it is only a program after all. This is demonstrated by the one incorrect
+            (but it's not a null result though?? Interesting??) result of the New York City skyline:
+        </p>
+        <section class="ImageResults">
+            <img src="../../../../Images/Week16/Test_NewYork.PNG">
+            <img src="../../../../Images/Week16/Test_NewYork_2.PNG">
+            <img src="../../../../Images/Week16/Test_NewYork_WRONG.PNG">
+        </section>
+        <p>
+            Some famous Johannesburg landmarks that are recognised include:
+        </p>
+        <section class="ImageResults">
+            <img src="../../../../Images/Week16/Test_JHB_ApartheidMuseum.PNG">
+            <img src="../../../../Images/Week16/Test_JHB_CityHall.PNG">
+            <img src="../../../../Images/Week16/Test_MuseuMAfricA.PNG">
+        </section>
+        <p>
+            This process makes me even more determined to encourage, grow, be a part of, narrate, etc. an online culture
+            of equality that hears and uplifts Africa's voice and history in order to shift the dominant white Northern
+            tide towards a different and more inclusive internet. We <b>will</b> put South Africa and Johannesburg on
+            the digital map.
+        </p>
+        <section class="ImageResults" style="padding-bottom: 10%;">
+            <img src="../../../../Images/Week16/south-africa-flag-xl.png" style="max-width: 100%; padding: 0;">
+        </section>
+    </article>
+    <footer class="footer">
+        <nav>
+            <a href="../../../../">Home Page</a> |
+            <a href="../../../../About-Me/">About Me</a> |
+            <a href="../../../../blogs/">My Blogs</a> |
+            <a href="../../../../Learn-With-Me/">Vision API</a> |
+            <a href="../../../../Contact-Me/">Contact Me</a>
+        </nav>
+    </footer>
+</body>
+
+</html>
