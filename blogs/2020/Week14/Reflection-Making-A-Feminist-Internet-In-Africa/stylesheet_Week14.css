@@ -1,0 +1,16 @@
+.storyContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.storyContainer h3{
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.storyContainer a{
+    text-align: center;
+    
+}
