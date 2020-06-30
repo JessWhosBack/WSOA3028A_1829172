@@ -54,12 +54,12 @@
             dependency or framework in order to explore the concept of augmenting, reflecting or challenging the
             physical world with the digital; specifically in context of the representation of Johannesburg. Since I
             suspected that implementing an interesting and useful dependency would take time and effort (I was correct),
-            I also wanted to use a dependency that Eddie (my character) would actually be interested and
-            inspired by as well. In other words, I really wanted this dependency to be something that Eddie would
-            actually want in his life. Another important note is that Eddie's entire life is situated in Johannesburg.
+            I also wanted to use a dependency that my character, Eddie, would actually be interested and inspired by as
+            well. In other words, I really wanted this dependency to be something that Eddie would actually want in his
+            life, and one of the most important aspects of Eddie's life is the fact that he lives in Johannesburg.
         </p>
         <p>
-            My first thought process was:
+            Thus, my first thought process was:
         <blockquote>
             When Eddie travels around Johannesburg...
             <br><b>How does he view his city?</b>
@@ -68,46 +68,69 @@
         </blockquote>
         </p>
         <p>
-            Eddie has been established as a person with a keen urge to learn. His second love is teaching and he has
-            incorporated studying into most of his life. He holds a diploma in Mechanical Engineering and has studied
-            further in other areas such as Theology and Social Studies. Over and above this, he lectured and taught
-            mechanical drawing for years and years.
+            Another extremely important aspect of Eddie's life is academics; learning and teaching. Eddie has been
+            established as a person with a keen urge to learn. His second love is teaching and he has incorporated
+            studying into most of his life. He holds a diploma in Mechanical Engineering and has studied further in
+            other areas such as Theology and Social Studies. Over and above this, he lectured and taught mechanical
+            drawing for many years.
         </p>
         <p>
-            With this in mind, my next thought, after watching the weekly lecture about APIs, was:
+            With this in mind, my next thought was:
         <blockquote>
             Since Eddie LOVES learning...
             <br>What if he could learn more about his city no matter where he is?
         </blockquote>
-        What if I could implement some dependency that allows the user to simply upload an image to this website, and it
-        tells them more about the said image? Specifically where the image is of. After lots of research, I found the
-        perfect dependency: Google's Cloud Vision API.
+        What if I could implement some dependency into this website that allows the user to simply upload any image, and
+        it immediately tells the user information about the said image? Specifically WHERE the image was taken - perhaps
+        using landmarks as the means of identification. After lots of research, I found the perfect dependency: Google's
+        Cloud Vision API.
         </p>
         <h2>About the Vision API</h2>
         <p>
             According to Google's <a href="https://cloud.google.com/vision/docs" target="_blank">documentation</a>,
             the Cloud Vision API allows developers to easily integrate vision detection features within
-            applications, including image labeling, face and landmark detection, optical character recognition
+            applications, including image labelling, face and landmark detection, optical character recognition
             (OCR), and tagging of explicit content.
         </p>
         <p>
-            In other words, this API does EXACTLY what I need it to do! This was very exciting!
+            In other words, this API does EXACTLY what I need it to do! Which was super exciting!
         </p>
+        <p>
+            After more research, it became apparent that the Vision API is definitely the best choice for me. It is
+            known as an almost plug-and-play image recognition API and has a very wide range of image analysis options.
+            It is arguably the best API to use for landmark and object detection since it is able to take advantage of
+            Google's own data and machine-learning libraries. It's Optical Character Recognition (OCR) feature is
+            exciting as it can identify not only printed, but also handwritten text, from an image, PDF or even a TIFF
+            file. Most reviews that I read warned that it is very expensive to use for commercial/bulk image analysis,
+            but luckily (see Google Cloud Account section below) there is not only a free-trial option that gives the
+            user $300 free to spend within the first year, but also allows the account to run 1000 different image
+            searches PER analysis category.
+        </p>
+        <p>
+            Since the Vision API is definitely the best suited API for detecting landmarks - due to Google's large data
+            and machine learning libraries - it was actually disappointing how little of the Johannesburg and even South
+            African landmarks it was able to detect compared to other (usually Northern) countries. I talk more about
+            this in my next blog about <a href="../Testing-Vision-API-With-Local-Landmarks/" target="_blank">Testing the
+                Vision API's Landmark Detection with Local Landmarks</a>, as well as in the actual <a
+                href="../../../../Learn-With-Me/" target="_blank">Vision API</a> section of this website.
+        </p>
+        <h2>Implementing the Vision API</h2>
         <h3>Requirements: Google Cloud Account</h3>
         <p>
-            In order to use the API, Google requires that I have a Google Cloud account, with billing enabled and I was
-            initially concerned about this as did not want to spend any money. Fortunately my concerns were unwarranted
+            In order to use the API, Google requires that I create a Google Cloud account, with billing enabled. I was
+            initially concerned about this, as did not want to spend any money. Fortunately my concerns were unwarranted
             as a Google Cloud account has a few convenient features:
         <ul>
             <li>
-                There is a free trial period in which the new account gets $300 to spend within a year.
+                There is a free trial period in which a new account gets $300 free to spend during the trial period
+                (within one year).
             </li>
             <li>
                 A credit card is required to start an account, but this will not be billed, even after the free trial
                 period has ended.
                 <ul>
-                    <li>This is to prove your identity and authenticity to Google.</li>
                     <li>Projects are required to have billing setup before you can use many of the APIs.</li>
+                    <li>This is only to prove your identity and authenticity to Google.</li>
                 </ul>
             </li>
             <li>
@@ -121,44 +144,153 @@
             </li>
         </ul>
         I thus was able to setup a Google Cloud account with sufficient access to use the Vision API without a hitch.
-        Little did I know, this would be the least of my problems faced.
+        Little did I know, this would be the least of my problems.
         </p>
         <h3>Requirements: API Key</h3>
         <p>
             To use the API from my website, I had to create an API key that authenticates calls made to the Vision API.
             It took me SO long to figure out how this worked. I had spent so much time researching and learning about
-            keys and attempting various solutions to no avail. I was honestly was about to give up, when I came accross
+            keys and attempting various solutions to no avail. I was honestly was about to give up, when I came across
             the perfect example of how to do this in Google Cloud's own community
-            <a href="https://github.com/GoogleCloudPlatform" target="_blank">Github repository</a>.
+            <a href="https://github.com/GoogleCloudPlatform" target="_blank">GitHub repository</a>.
             Specifically the <a
                 href="https://github.com/GoogleCloudPlatform/web-docs-samples/tree/master/vision/explore-api"
                 target="_blank">GoogleCloudPlatform/web-docs-samples</a> repository.
         </p>
         <p>
-            However, I quickly realised that I had just done something very unsecure and rather dangerous: made my newly
-            discovered and created API key public. This means that anyone with this key would be able to make calls to
-            and use the Vision API... Not good!
+            After successfully using this API key within my HTML and JavaScript, I was able to setup a connection to the
+            Vision API on my website. However, I quickly realised that I had just done something very unsecure and
+            rather dangerous: made my API key public. This means that anyone can simply inspect my website, copy out my
+            key and use it to make authentic calls to the Vision API... Not good! Google even sent me an email saying:
+
+        <blockquote style="text-align: left;">
+            Dear Customer,
+            <br> We have detected a publicly accessible Google API key associated with the following Google Cloud
+            Platform project:
+            <br><br> Project WSOA3028A (id: XXX) with API key XYZ
+            <br><br> The key was found at the following URL:
+            <a href="https://github.com/JessWhosBack/WSOA3028A_1829172/blob/bfaee72a6c80a575c462bfdfc1bd4290896e5607/Learn-With-Me/key.js"
+                target="_blank">https://github.com/JessWhosBack/WSOA3028A_1829172/</a>
+            <br><br> We believe that you or your organization may have inadvertently published the affected API key in
+            public sources or on public websites (for example, credentials mistakenly uploaded to a service such as
+            GitHub.)
+            <br><br> Please note that as the project/account owner, you are responsible for securing your keys.
+            Therefore, we recommend that you take the following steps to remedy this situation:
+            <ol>
+                <li>
+                    If this key is intended to be public (or if a publicly accessible key isn’t preventable):
+                    <ul>
+                        <li>
+                            Log in to the Google Cloud Console and review the API and billing activity on your account,
+                            ensuring the usage is in line with what you expected.
+                        </li>
+                        <li>
+                            Add <a href="https://cloud.google.com/docs/authentication/api-keys#api_key_restrictions"
+                                target="_blank">API key restrictions</a> to your API key, if applicable.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    If this key was NOT meant to be public:
+                    <ul>
+                        <li>
+                            Regenerate the compromised API key: Search for Credentials in the cloud console platform,
+                            Edit the leaked key, and use the Regenerate Key button to rotate the key. For more details,
+                            review the instructions on <a
+                                href="https://cloud.google.com/security/compromised-credentials"
+                                target="_blank">handling compromised GCP credentials</a>.
+                        </li>
+                        <li>
+                            Take immediate steps to ensure that your API key(s) are not embedded in public source code
+                            systems, stored in download directories, or unintentionally shared in other ways.
+                        </li>
+                        <li>
+                            Add <a href="https://cloud.google.com/docs/authentication/api-keys#api_key_restrictions"
+                                target="_blank">API key restrictions</a> to your API key, if applicable.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            The security of your Google Cloud Platform account(s) is important to us.
+            <br><br> Sincerely,
+            <br> Google Cloud Platform Trust & Safety
+        </blockquote>
         </p>
         <p>
-            All research I did told me that hiding this key when using <b>only</b> JavaScript, HTML, CSS, etc. was
-            impossible. I was completely stuck. Fortunately, Google Cloud allows users to restrict their API keys to
-            ONLY allow specified pages to call the API. While I am definitely not happy with this "solution", I believe
-            it is the best that I can do for this assignment within the allocated time. As soon as this assignment has
-            been marked I will remove the public API key.
+            All research I did told me that hiding this key when using only JavaScript, HTML, CSS, etc. was impossible.
+            I was completely stuck. Fortunately, following the advice in the above email from Google Cloud, I was able
+            to restrict my API key to ONLY allow specified webpages or domains to call the API - in other words, only
+            THIS website can use the key. While I am definitely not happy with this "solution", I believe it is the best
+            that I can do for this assignment within the allocated time. As soon as this assignment has been marked I
+            will remove the public API key.
         </p>
-        <h3>External Dependency or Framework</h3>
+
+
+
+        <h2>Alternatives to the Vision API</h2>
         <p>
-            Why is this dependency necessary?
-            What alternatives are there?
-            Why did I choose this one?
-            Technical impact of it?
+            There are some amazing and super useful image analysis APIs out there, but hardly any of them facilitate
+            landmark identification or detection. A few alternatives to the Vision API are listed below, with the
+            reasons why they were not chosen.
+        <ul>
+            <li>
+                Amazon's <a href="https://aws.amazon.com/rekognition/" target="_blank">Rekognition API</a>
+                <ul>
+                    <li>
+                        Known for the Celebrity Recognition, Capture Movement and Detect Text in Image features, this
+                        API also has a free tier for one year, however it is not as well suited to analyse images for
+                        landmarks as the Vision API.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                IBM's <a href="https://www.ibm.com/cloud/watson-visual-recognition" target="_blank">Watson Visual
+                    Recognition API</a>
+                <ul>
+                    <li>
+                        Known for allowing users to build, train and test custom machine learning models - which sounds
+                        SUPER cool, but probably too complicated for this assignment, and does not facilitate landmark
+                        detection.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Microsoft Azure Cloud's <a
+                    href="https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/"
+                    target="_blank">Computer Vision API</a>
+                <ul>
+                    <li>
+                        I think this is the best alternative to the Vision API to facilitate my needs.
+                    </li>
+                    <li>
+                        Perhaps the best API for analysing image properties. It also facilitates landmark detection, but
+                        does not have as extensive database to draw from as Google. Is also priced per region as well as
+                        per number of images analysed.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://www.clarifai.com/" target="_blank">Clarifai</a>
+                <ul>
+                    <li>
+                        This API also allows for machine learning, and is known for it's fashion identification system.
+                        Another noteworthy feature is the food algorithm (which can analyse food items down to the
+                        ingredient level). Again, does not facilitate landmark detection.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://imagga.com/" target="_blank">Imagga</a>
+                <ul>
+                    <li>
+                        This API is an automated image tagging and categorization API - i.e. a Digital Asset Management
+                        API. While an incredibly useful API for the analysis of images and other digital media, this
+                        does not suit my need for a landmark identification API.
+                    </li>
+                </ul>
+            </li>
+        </ul>
         </p>
-        <h3>Augmenting/Reflecting/Challenging the Physical World with the Digital</h3>
-        <h3>Johannesburg</h3>
-
-        <h2>About the Vision API</h2>
-
-        <h2>Security Concerns: Public API Key</h2>
     </article>
     <footer class="footer">
         <nav>
